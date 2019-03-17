@@ -25,8 +25,8 @@
         private void InitializeComponent() {
             this.module1 = new DevExpress.ExpressApp.SystemModule.SystemModule();
             this.module2 = new DevExpress.ExpressApp.Win.SystemModule.SystemWindowsFormsModule();
-            this.module3 = new Ultra.MainDemo.Module.MainDemoModule();
-            this.module4 = new Ultra.MainDemo.Module.Win.MainDemoWindowsFormsModule();
+            this.module3 = new Ultra.MainDemo.Module.UltraModuleTemplateModule();
+            this.module4 = new Ultra.MainDemo.Module.Win.UltraModuleTemplateModule();
             this.securityModule1 = new DevExpress.ExpressApp.Security.SecurityModule();
             this.securityStrategyComplex1 = new DevExpress.ExpressApp.Security.SecurityStrategyComplex();
             this.securityStrategyComplex1.SupportNavigationPermissionsForTypes = false;
@@ -73,8 +73,8 @@
 
         private DevExpress.ExpressApp.SystemModule.SystemModule module1;
         private DevExpress.ExpressApp.Win.SystemModule.SystemWindowsFormsModule module2;
-        private Ultra.MainDemo.Module.MainDemoModule module3;
-        private Ultra.MainDemo.Module.Win.MainDemoWindowsFormsModule module4;
+        private Ultra.MainDemo.Module.UltraModuleTemplateModule module3;
+        private Ultra.MainDemo.Module.Win.UltraModuleTemplateModule module4;
         private DevExpress.ExpressApp.Security.SecurityModule securityModule1;
         private DevExpress.ExpressApp.Security.SecurityStrategyComplex securityStrategyComplex1;
         private DevExpress.ExpressApp.Security.AuthenticationStandard authenticationStandard1;

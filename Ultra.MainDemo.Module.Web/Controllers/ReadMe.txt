@@ -1,6 +1,6 @@
 ﻿Folder Description
 
-The "Controllers" project folder is intended for storing ASP.NET-specific Controller classes 
+The "Controllers" project folder is intended for storing platform-agnostic Controller classes 
 that can change the default XAF application flow and add new features.
 
 

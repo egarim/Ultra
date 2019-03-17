@@ -15,9 +15,9 @@ using DevExpress.ExpressApp.Model.Core;
 using DevExpress.ExpressApp.Model.DomainLogics;
 using DevExpress.ExpressApp.Model.NodeGenerators;
 using DevExpress.ExpressApp.Xpo;
-using Ultra.MainDemo.Module.Updaters;
+using Ultra.MainDemo.Module.Win.Updaters;
 
-namespace Ultra.MainDemo.Module
+namespace Ultra.MainDemo.Module.Win
 {
     // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppModuleBasetopic.aspx.
     public sealed partial class UltraModuleTemplateModule : ModuleBase

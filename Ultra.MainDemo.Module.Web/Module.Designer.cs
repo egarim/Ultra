@@ -1,4 +1,4 @@
-﻿namespace Ultra.MainDemo.Module
+﻿namespace Ultra.MainDemo.Module.Web
 {
     partial class UltraModuleTemplateModule
     {

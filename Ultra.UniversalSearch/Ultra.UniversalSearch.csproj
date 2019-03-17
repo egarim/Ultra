@@ -1,18 +1,71 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net452</TargetFramework>
+    <Configurations>Debug;Release;18_2_3_1;18_2_4_1;18_2_5_1;18_2_6_1</Configurations>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Jose Manuel Ojeda Melgar</Authors>
     <PackageTags>Joche Ojeda, XAF, Express Application Framework,DevExpress,Ultra,</PackageTags>
     <Company>BIT Frameworks</Company>
     <Description>This module helps you search across all your persistent classes and present a unified search result</Description>
+    <DebugType>full</DebugType>
+    <PackageProjectUrl>https://github.com/egarim/Ultra/tree/master/Ultra.UniversalSearch</PackageProjectUrl>
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
-  <ItemGroup>
+  <!--Nuget Generation Section-->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_3_1|AnyCPU'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>18.2.3.1</Version>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_4_1|AnyCPU'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>18.2.4.1</Version>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_5_1|AnyCPU'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>18.2.5.1</Version>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_6_1|AnyCPU'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>18.2.6.1</Version>
+  </PropertyGroup>
+  <!--Nuget Generation Section-->
+  <!--Nuget Reference Section-->
+  <!--Debug Build Reference-->
+  <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <PackageReference Include="DevExpress.ExpressApp" Version="18.2.6" />
     <PackageReference Include="DevExpress.ExpressApp.Security.Xpo" Version="18.2.6" />
     <PackageReference Include="DevExpress.ExpressApp.Validation" Version="18.2.6" />
     <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="18.2.6" />
   </ItemGroup>
+  <!--Debug Build Reference-->
+  <ItemGroup Condition=" '$(Configuration)' == '18_2_3_1' ">
+    <PackageReference Include="DevExpress.ExpressApp" Version="18.2.3" />
+    <PackageReference Include="DevExpress.ExpressApp.Security.Xpo" Version="18.2.3" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="18.2.3" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="18.2.3" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == '18_2_4_1' ">
+    <PackageReference Include="DevExpress.ExpressApp" Version="18.2.4" />
+    <PackageReference Include="DevExpress.ExpressApp.Security.Xpo" Version="18.2.4" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="18.2.4" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="18.2.4" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == '18_2_5_1' ">
+    <PackageReference Include="DevExpress.ExpressApp" Version="18.2.5" />
+    <PackageReference Include="DevExpress.ExpressApp.Security.Xpo" Version="18.2.5" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="18.2.5" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="18.2.5" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == '18_2_6_1' ">
+    <PackageReference Include="DevExpress.ExpressApp" Version="18.2.6" />
+    <PackageReference Include="DevExpress.ExpressApp.Security.Xpo" Version="18.2.6" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="18.2.6" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="18.2.6" />
+  </ItemGroup>
+  <!--Nuget Reference Section-->
+  <Target Name="CopyPackage" AfterTargets="Pack">
+    <Copy SourceFiles="bin\$(ConfigurationName)\$(PackageId).$(PackageVersion).nupkg" DestinationFolder="C:\Users\Joche\Documents\MyNugets\" />
+  </Target>
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>

@@ -1,8 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<Application Title="Ultra.MainDemo">
-  <Options>
-    <LayoutManagerOptions RequiredFieldMark="*" />
-  </Options>
+<Application>
   <Views>
   </Views>
 </Application>
