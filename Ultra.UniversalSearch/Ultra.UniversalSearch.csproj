@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net452</TargetFramework>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Jose Manuel Ojeda Melgar</Authors>
+    <PackageTags>Joche Ojeda, XAF, Express Application Framework,DevExpress,Ultra,</PackageTags>
+    <Company>BIT Frameworks</Company>
+    <Description>This module helps you search across all your persistent classes and present a unified search result</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="DevExpress.ExpressApp.Security.Xpo" Version="18.2.6" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="18.2.6" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="18.2.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+</Project>

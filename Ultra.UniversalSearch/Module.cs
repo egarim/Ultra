@@ -15,9 +15,10 @@ using DevExpress.ExpressApp.Model.Core;
 using DevExpress.ExpressApp.Model.DomainLogics;
 using DevExpress.ExpressApp.Model.NodeGenerators;
 using DevExpress.ExpressApp.Xpo;
-using UltraModuleTemplate.Updaters;
+using Ultra.UniversalSearch.Updaters;
+using Template.Module.Controllers;
 
-namespace UltraModuleTemplate
+namespace Ultra.UniversalSearch
 {
     // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppModuleBasetopic.aspx.
     public sealed partial class UltraModuleTemplateModule : ModuleBase
@@ -55,23 +56,16 @@ namespace UltraModuleTemplate
 
         protected override IEnumerable<Type> GetDeclaredExportedTypes()
         {
-            //TODO return an array of types to improve performance
-            //return new Type[] {
-            //    typeof(BIT.XAF.DataImport.BusinessObjects.ImportMap),
-
-            //};
-            return base.GetDeclaredExportedTypes();
+            return new Type[] {
+                typeof(UniversalSearchResult),
+            };
         }
 
         protected override IEnumerable<Type> GetDeclaredControllerTypes()
         {
-            //TODO return an array of types to improve performance
-
-            //return new Type[] {
-            //    typeof(ImportControllerExcel),typeof(DisableNestedObjectActions),
-            //    typeof(ShowDataDictionary), typeof(DataDictionaryController)
-            //};
-            return base.GetDeclaredControllerTypes();
+            return new Type[] {
+                typeof(UniversalSearchController)
+            };
         }
     }
 }
