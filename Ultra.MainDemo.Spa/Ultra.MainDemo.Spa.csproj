@@ -1,0 +1,136 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+    <AssemblyName>Ultra.MainDemo.Spa</AssemblyName>
+    <NoDefaultLaunchSettingsFile>True</NoDefaultLaunchSettingsFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="build\**" />
+    <Compile Remove="wwwroot\dist\**" />
+    <Content Remove="build\**" />
+    <Content Remove="wwwroot\dist\**" />
+    <EmbeddedResource Remove="build\**" />
+    <EmbeddedResource Remove="wwwroot\dist\**" />
+    <None Remove="build\**" />
+    <None Remove="wwwroot\dist\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DevExtreme.AspNet.Data" Version="2.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Model.xafml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Model.xafml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ultra.MainDemo.Module.Spa\Ultra.MainDemo.Module.Spa.csproj" />
+    <ProjectReference Include="..\Ultra.MainDemo.Module\Ultra.MainDemo.Module.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+  <Compile Update="SpaApplication.cs">
+    <SubType>Designer</SubType>
+  </Compile>
+  <Compile Update="SpaApplication.Designer.cs">
+    <SubType>Designer</SubType>
+    <DependentUpon>SpaApplication.cs</DependentUpon>
+  </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.ExpressApp.Security.v18.2">
+      <HintPath>DevExpress.ExpressApp.Security.v18.2</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Security.Xpo.v18.2">
+      <HintPath>DevExpress.ExpressApp.Security.Xpo.v18.2</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.v18.2">
+      <HintPath>DevExpress.ExpressApp.Validation.v18.2</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Configuration"><Private>False</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.ExpressApp.Spa.v18.2">
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.ExpressApp.v18.2">
+    <Private>False</Private></Reference>
+    <Reference Include="DevExpress.ExpressApp.Xpo.v18.2">
+      <SpecificVersion>False</SpecificVersion>
+      
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.2">
+      <SpecificVersion>False</SpecificVersion>
+      
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Images.v18.2">
+      <SpecificVersion>False</SpecificVersion>
+      
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v18.2">
+      <SpecificVersion>False</SpecificVersion>
+      
+    </Reference>
+    <Reference Include="DevExpress.Persistent.BaseImpl.v18.2">
+      <SpecificVersion>False</SpecificVersion>
+      
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.2">
+      <SpecificVersion>False</SpecificVersion>
+      
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v18.2">
+      <SpecificVersion>False</SpecificVersion>
+      
+    </Reference>
+  </ItemGroup>
+  <!-- Workaround for https://github.com/dotnet/roslyn-project-system/issues/1739 -->
+  <PropertyGroup>
+    <AssemblySearchPaths>$(AssemblySearchPaths);{GAC}</AssemblySearchPaths>
+  </PropertyGroup>
+  <Target Name="BuildClientSide" BeforeTargets="Build">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Performing checks and updates..." />
+    <Exec Command="PowerShell.exe -ExecutionPolicy UnRestricted -File ./extract.ps1" />
+  </Target>
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec Command="npm install" />
+    <!--
+    <Exec Command="node node_modules/webpack/bin/webpack.js - -config webpack.config.vendor.js - -env.prod" /> 
+    <Exec Command="node node_modules/webpack/bin/webpack.js - -env.prod" /> 
+    <Exec Command="PowerShell.exe -ExecutionPolicy UnRestricted -File ./extract.ps1" />
+     -->
+    
+    <Exec Command="npm run build" />
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="wwwroot\dist\**; ClientApp\dist\**" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+</Project>
