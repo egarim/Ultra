@@ -12,7 +12,7 @@ namespace Ultra.MainDemo.Module.Updaters
     ModelNodesGeneratorUpdater<ModelLocalizationNodesGenerator>
     {
         //TODO Change ModuleName Node
-        public const string ModuleName = "ModuleNode";
+        public const string ModuleName = "Ultra.MainDemo";
 
         public override void UpdateNode(ModelNode node)
         {

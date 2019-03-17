@@ -2,9 +2,13 @@
 using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Actions;
 using DevExpress.ExpressApp.DC;
+using DevExpress.ExpressApp.Editors;
+using DevExpress.ExpressApp.Filtering;
 using DevExpress.ExpressApp.Model;
 using DevExpress.ExpressApp.SystemModule;
-
+using DevExpress.ExpressApp.Xpo;
+using DevExpress.Persistent.Base;
+using DevExpress.Xpo.Metadata;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -27,6 +31,105 @@ namespace Template.Module.Controllers
             // Target required Views (via the TargetXXX properties) and create their Actions.
             parametrizedAction = new ParametrizedAction(this, "Universal Search", DevExpress.Persistent.Base.PredefinedCategory.View, typeof(string));
             parametrizedAction.Execute += Search_Execute;
+            this.TargetObjectType = typeof(UniversalSearchResult);
+            FullTextSearchTargetPropertiesMode = FullTextSearchTargetPropertiesMode.AllSearchableMembers;
+        }
+
+        public FullTextSearchTargetPropertiesMode FullTextSearchTargetPropertiesMode
+        {
+            get { return fullTextSearchTargetPropertiesMode; }
+            set { fullTextSearchTargetPropertiesMode = value; }
+        }
+
+        private String GetBindingPropertyName(IModelColumn modelColumn)
+        {
+            if (modelColumn != null)
+            {
+                IMemberInfo memberInfo = null;
+                if (modelColumn.ModelMember != null)
+                {
+                    memberInfo = new ObjectEditorHelperBase(modelColumn.ModelMember.MemberInfo.MemberTypeInfo, modelColumn).DisplayMember;
+                }
+                if (memberInfo != null)
+                {
+                    return modelColumn.PropertyName + "." + memberInfo.Name;
+                }
+                else
+                {
+                    return modelColumn.PropertyName;
+                }
+            }
+            return String.Empty;
+        }
+
+        protected virtual String[] GetShownProperties()
+        {
+            List<String> visibleProperties = new List<String>();
+            ColumnsListEditor _editor = View.Editor as ColumnsListEditor;
+            List<IModelColumn> modelColumns = new List<IModelColumn>();
+            if (_editor != null && View.IsControlCreated)
+            {
+                foreach (ColumnWrapper item in _editor.Columns)
+                {
+                    if (!String.IsNullOrEmpty(item.PropertyName) && item.Visible)
+                    {
+                        IModelColumn modelColumn = View.Model.Columns[item.Id];
+                        modelColumns.Add(modelColumn);
+                    }
+                }
+            }
+            else
+            {
+                foreach (IModelColumn modelColumn in View.Model.Columns.GetVisibleColumns())
+                {
+                    modelColumns.Add(modelColumn);
+                }
+            }
+            foreach (IModelColumn modelColumn in modelColumns)
+            {
+                String propertyName = GetBindingPropertyName(modelColumn);
+                if (!String.IsNullOrEmpty(propertyName))
+                {
+                    visibleProperties.Add(propertyName);
+                }
+            }
+            return visibleProperties.ToArray();
+        }
+
+        public ICollection<String> GetFullTextSearchProperties(ITypeInfo TypeInfo)
+        {
+            SearchCriteriaBuilder criteriaBuilder = new SearchCriteriaBuilder(TypeInfo);
+            criteriaBuilder.IncludeNonPersistentMembers = false;
+            switch (fullTextSearchTargetPropertiesMode)
+            {
+                case FullTextSearchTargetPropertiesMode.AllSearchableMembers:
+                    criteriaBuilder.FillSearchProperties();
+                    criteriaBuilder.AddSearchProperties(GetShownProperties());
+                    break;
+
+                case FullTextSearchTargetPropertiesMode.VisibleColumns:
+                    List<String> shownProperties = new List<String>(GetShownProperties());
+                    String friendlyKeyMemberName = FriendlyKeyPropertyAttribute.FindFriendlyKeyMemberName(View.ObjectTypeInfo, true);
+                    if (!String.IsNullOrEmpty(friendlyKeyMemberName) && !shownProperties.Contains(friendlyKeyMemberName))
+                    {
+                        shownProperties.Add(friendlyKeyMemberName);
+                    }
+                    criteriaBuilder.SetSearchProperties(shownProperties);
+                    break;
+
+                default:
+                    throw new ArgumentException(fullTextSearchTargetPropertiesMode.ToString(), "fullTextSearchTargetPropertiesMode");
+            }
+            ICollection<String> result = null;
+            if ((View.CollectionSource != null) && (View.CollectionSource.DataAccessMode == CollectionSourceDataAccessMode.DataView))
+            {
+                result = ListView.CorrectMemberNames(View.ObjectTypeInfo, criteriaBuilder.SearchProperties, false, false, true);
+            }
+            else
+            {
+                result = criteriaBuilder.SearchProperties;
+            }
+            return result;
         }
 
         private void ShowDetailView_Execute(object sender, SimpleActionExecuteEventArgs e)
@@ -72,6 +175,7 @@ namespace Template.Module.Controllers
         private ListViewProcessCurrentObjectController processCurrentObjectController;
         private SimpleAction detailView;
         private ParametrizedAction parametrizedAction;
+        private FullTextSearchTargetPropertiesMode fullTextSearchTargetPropertiesMode;
 
         private void ObjectSpace_ObjectsGetting(object sender, ObjectsGettingEventArgs e)
         {
@@ -83,13 +187,7 @@ namespace Template.Module.Controllers
             var result = this.Application.Model.BOModel.GetClass(TargetType);
 
             //we get a list of all the properties that can be involved in the filter
-            //ICollection<string> SearchProperties = standardFilterController.GetFullTextSearchProperties();
-
-            Collection<string> SearchProperties = new Collection<string>();
-            foreach (IModelMember modelMember in result.OwnMembers)
-            {
-                SearchProperties.Add(modelMember.Name);
-            }
+            ICollection<string> SearchProperties = GetFullTextSearchProperties(Application.TypesInfo.PersistentTypes.Where(ti => ti.Type == TargetType).FirstOrDefault());
 
             //we declare a model class and a property name,the values on this variables will change if we property involve is a navigation property (another persistent object)
             IModelClass ModelClass = null;
@@ -188,11 +286,16 @@ namespace Template.Module.Controllers
         {
             var os = this.Application.CreateObjectSpace();
             objects.Clear();
+
             foreach (Type type in SearchableTypes)
             {
                 UniversalSearchAttributeAttribute attrs = (UniversalSearchAttributeAttribute)type.GetCustomAttributes(true).Cast<Attribute>().Where(att => att.GetType().IsAssignableFrom(typeof(UniversalSearchAttributeAttribute))).FirstOrDefault();
 
+                if (e.ParameterCurrentValue == null)
+                    return;
+
                 CriteriaOperator criteria = GetCaseInsensitiveCriteria(e.ParameterCurrentValue, type);
+
                 string[] DisplayProperties = attrs.DisplayProperties.Split(';');
                 string QueryColumns = this.Application.Model.BOModel.GetClass(type).KeyProperty + ";" + attrs.DisplayProperties;
                 var Dv = os.CreateDataView(type, QueryColumns, criteria, null);
@@ -209,6 +312,7 @@ namespace Template.Module.Controllers
                         FullDisplay = FullDisplay + " " + xafDataViewRecord[displayProperty]?.ToString();
                     }
                     SearchResult.Display = FullDisplay;
+                    FullDisplay = string.Empty;
                     objects.Add(SearchResult);
                 }
             }

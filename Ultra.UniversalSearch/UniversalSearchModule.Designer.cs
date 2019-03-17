@@ -1,6 +1,6 @@
 ﻿namespace Ultra.UniversalSearch
 {
-    partial class UltraModuleTemplateModule
+    partial class UniversalSearchModule
     {
         /// <summary> 
         /// Required designer variable.
