@@ -4,7 +4,7 @@
     <Configurations>Debug;Release;18_2_3_1;18_2_4_1;18_2_5_1;18_2_6_1</Configurations>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <Authors>Jose Manuel Ojeda Melgar</Authors>
-    <PackageTags>Joche Ojeda, XAF, Express Application Framework,DevExpress,Ultra,</PackageTags>
+    <PackageTags>JocheOjeda XAF ExpressApplicationFramework DevExpress Ultra </PackageTags>
     <Company>BIT Frameworks</Company>
     <Description>Module description</Description>
     <DebugType>full</DebugType>

@@ -55,4 +55,7 @@
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ultra.Scripting.Core\Ultra.Scripting.Core.csproj" />
+  </ItemGroup>
 </Project>

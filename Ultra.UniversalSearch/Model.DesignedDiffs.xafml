@@ -4,6 +4,11 @@
     <SchemaModule Name="SystemModule" Version="18.2.6.0" IsNewNode="True" />
   </SchemaModules>
   <Views>
-    <ListView Id="UniversalSearchResult_ListView" IsGroupPanelVisible="True" IsFooterVisible="True" />
+    <ListView Id="UniversalSearchResult_ListView" IsGroupPanelVisible="True" IsFooterVisible="True">
+      <Columns>
+        <ColumnInfo Id="Display" Index="0" />
+        <ColumnInfo Id="ObjectDisplayName" SortIndex="-1" GroupIndex="0" Index="1" />
+      </Columns>
+    </ListView>
   </Views>
 </Application>

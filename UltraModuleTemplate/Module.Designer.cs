@@ -1,5 +1,5 @@
 ﻿namespace UltraModuleTemplate {
-	partial class UltraModuleTemplateModule {
+	partial class UltraModuleTemplate {
 		/// <summary> 
 		/// Required designer variable.
 		/// </summary>

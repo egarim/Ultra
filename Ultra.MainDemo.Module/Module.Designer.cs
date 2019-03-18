@@ -33,6 +33,8 @@
             // 
             this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.SystemModule.SystemModule));
             this.RequiredModuleTypes.Add(typeof(Ultra.UniversalSearch.UniversalSearchModule));
+            this.RequiredModuleTypes.Add(typeof(Ultra.Scripting.Core.ScriptingCoreModule));
+            this.AdditionalExportedTypes.Add(typeof(Ultra.Scripting.Core.BusinessObjects.Script));
         }
 
         #endregion
