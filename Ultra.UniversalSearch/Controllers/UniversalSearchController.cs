@@ -6,6 +6,7 @@ using DevExpress.ExpressApp.Editors;
 using DevExpress.ExpressApp.Filtering;
 using DevExpress.ExpressApp.Model;
 using DevExpress.ExpressApp.SystemModule;
+using DevExpress.ExpressApp.Utils;
 using DevExpress.ExpressApp.Xpo;
 using DevExpress.Persistent.Base;
 using DevExpress.Xpo.Metadata;
@@ -16,7 +17,6 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using Ultra.UniversalSearch;
-using Ultra.UniversalSearch.BusinessObjects;
 
 namespace Template.Module.Controllers
 {
@@ -25,9 +25,9 @@ namespace Template.Module.Controllers
     {
         public UniversalSearchController()
         {
-            detailView = new SimpleAction(this, "ShowDetailView", "Hidden");
-            detailView.Caption = "ShowDetailView";
-            detailView.Execute += ShowDetailView_Execute;
+            OpenDetailViewAction = new SimpleAction(this, "ShowDetailView", "Hidden");
+            OpenDetailViewAction.Caption = "ShowDetailView";
+            OpenDetailViewAction.Execute += ShowDetailView_Execute;
             // Target required Views (via the TargetXXX properties) and create their Actions.
             parametrizedAction = new ParametrizedAction(this, "Universal Search", DevExpress.Persistent.Base.PredefinedCategory.View, typeof(string));
             parametrizedAction.Execute += Search_Execute;
@@ -41,7 +41,9 @@ namespace Template.Module.Controllers
             set { fullTextSearchTargetPropertiesMode = value; }
         }
 
-        private String GetBindingPropertyName(IModelColumn modelColumn)
+        public SimpleAction OpenDetailViewAction { get => _OpenDetailViewAction; set => _OpenDetailViewAction = value; }
+
+        protected virtual String GetBindingPropertyName(IModelColumn modelColumn)
         {
             if (modelColumn != null)
             {
@@ -96,7 +98,7 @@ namespace Template.Module.Controllers
             return visibleProperties.ToArray();
         }
 
-        public ICollection<String> GetFullTextSearchProperties(ITypeInfo TypeInfo)
+        protected virtual ICollection<String> GetFullTextSearchProperties(ITypeInfo TypeInfo)
         {
             SearchCriteriaBuilder criteriaBuilder = new SearchCriteriaBuilder(TypeInfo);
             criteriaBuilder.IncludeNonPersistentMembers = false;
@@ -132,7 +134,7 @@ namespace Template.Module.Controllers
             return result;
         }
 
-        private void ShowDetailView_Execute(object sender, SimpleActionExecuteEventArgs e)
+        protected virtual void ShowDetailView_Execute(object sender, SimpleActionExecuteEventArgs e)
         {
             UniversalSearchResult CurrentSearchResult = (UniversalSearchResult)e.CurrentObject;
             IObjectSpace objectSpace = Application.CreateObjectSpace(CurrentSearchResult.ObjectType);
@@ -154,7 +156,7 @@ namespace Template.Module.Controllers
 
             SearchableTypes = new List<Type>();
 
-            IEnumerable<ITypeInfo> SearchTypes = this.Application.TypesInfo.PersistentTypes.Where(ti => ti.FindAttribute<UniversalSearchAttributeAttribute>() != null);
+            IEnumerable<ITypeInfo> SearchTypes = this.Application.TypesInfo.PersistentTypes.Where(ti => ti.FindAttribute<UniversalSearchAttribute>() != null);
 
             foreach (ITypeInfo typeInfo in SearchTypes)
             {
@@ -165,24 +167,24 @@ namespace Template.Module.Controllers
             objectSpace.ObjectsGetting += ObjectSpace_ObjectsGetting;
         }
 
-        private void processCurrentObjectController_CustomProcessSelectedItem(object sender, CustomProcessListViewSelectedItemEventArgs e)
+        protected virtual void processCurrentObjectController_CustomProcessSelectedItem(object sender, CustomProcessListViewSelectedItemEventArgs e)
         {
             e.Handled = true;
-            detailView.DoExecute();
+            OpenDetailViewAction.DoExecute();
         }
 
         private BindingList<UniversalSearchResult> objects = new BindingList<UniversalSearchResult>();
         private ListViewProcessCurrentObjectController processCurrentObjectController;
-        private SimpleAction detailView;
+        private SimpleAction _OpenDetailViewAction;
         private ParametrizedAction parametrizedAction;
         private FullTextSearchTargetPropertiesMode fullTextSearchTargetPropertiesMode;
 
-        private void ObjectSpace_ObjectsGetting(object sender, ObjectsGettingEventArgs e)
+        protected virtual void ObjectSpace_ObjectsGetting(object sender, ObjectsGettingEventArgs e)
         {
             e.Objects = objects;
         }
 
-        private CriteriaOperator GetCaseInsensitiveCriteria(object searchValue, Type TargetType)
+        protected virtual CriteriaOperator GetCaseInsensitiveCriteria(object searchValue, Type TargetType)
         {
             var result = this.Application.Model.BOModel.GetClass(TargetType);
 
@@ -282,14 +284,14 @@ namespace Template.Module.Controllers
             }
         }
 
-        private void Search_Execute(object sender, ParametrizedActionExecuteEventArgs e)
+        protected virtual void Search_Execute(object sender, ParametrizedActionExecuteEventArgs e)
         {
             var os = this.Application.CreateObjectSpace();
             objects.Clear();
 
             foreach (Type type in SearchableTypes)
             {
-                UniversalSearchAttributeAttribute attrs = (UniversalSearchAttributeAttribute)type.GetCustomAttributes(true).Cast<Attribute>().Where(att => att.GetType().IsAssignableFrom(typeof(UniversalSearchAttributeAttribute))).FirstOrDefault();
+                UniversalSearchAttribute attrs = (UniversalSearchAttribute)type.GetCustomAttributes(true).Cast<Attribute>().Where(att => att.GetType().IsAssignableFrom(typeof(UniversalSearchAttribute))).FirstOrDefault();
 
                 if (e.ParameterCurrentValue == null)
                     return;
@@ -303,15 +305,18 @@ namespace Template.Module.Controllers
                 for (int i = 0; i < Dv.Count; i++)
                 {
                     var SearchResult = this.View.ObjectSpace.CreateObject<UniversalSearchResult>();
-                    SearchResult.ObjectDisplayName = type.Name;
+                    SearchResult.ObjectDisplayName = CaptionHelper.GetClassCaption(type.FullName);
                     XafDataViewRecord xafDataViewRecord = (XafDataViewRecord)Dv[i];
                     SearchResult.ObjectType = type;
                     SearchResult.ObjectKey = xafDataViewRecord[0].ToString();
+                    List<string> Values = new List<string>();
                     foreach (var displayProperty in DisplayProperties)
                     {
-                        FullDisplay = FullDisplay + " " + xafDataViewRecord[displayProperty]?.ToString();
+                        //FullDisplay = FullDisplay + " " + xafDataViewRecord[displayProperty]?.ToString();
+                        Values.Add(xafDataViewRecord[displayProperty]?.ToString());
                     }
-                    SearchResult.Display = FullDisplay;
+                    //SearchResult.Display = FullDisplay;
+                    SearchResult.Display = string.Format(attrs.DisplayPropertiesStringFormat, Values.ToArray());
                     FullDisplay = string.Empty;
                     objects.Add(SearchResult);
                 }

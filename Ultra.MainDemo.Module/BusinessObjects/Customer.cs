@@ -1,4 +1,5 @@
-﻿using DevExpress.Persistent.Base;
+﻿using DevExpress.ExpressApp.Model;
+using DevExpress.Persistent.Base;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Xpo;
 using System;
@@ -7,13 +8,14 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Ultra.UniversalSearch.BusinessObjects;
+using Ultra.UniversalSearch;
 
 namespace Ultra.MainDemo.Module.BusinessObjects
 {
     [DefaultClassOptions]
     [DefaultProperty("Name")]
-    [UniversalSearchAttribute("Code;Name")]
+    [ModelDefault("Caption", "Customer")]
+    [UniversalSearch("Code;Name;Country.Name", "Customer Code:{0} - Customer Name:{1} from {2}")]
     public class Customer : BaseObject
     {
         /// <summary>
@@ -60,7 +62,7 @@ namespace Ultra.MainDemo.Module.BusinessObjects
 
     [DefaultClassOptions]
     [DefaultProperty("Name")]
-    [UniversalSearchAttribute("Code;Name")]
+    [UniversalSearchAttribute("Code;Name", "Country Code:{0} - Country Name:{1}")]
     public class Country : BaseObject
     {
         /// <summary>

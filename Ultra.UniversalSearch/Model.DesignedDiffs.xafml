@@ -1,5 +1,9 @@
-﻿<?xml version="1.0" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Application>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="18.2.6.0" IsNewNode="True" />
+  </SchemaModules>
   <Views>
+    <ListView Id="UniversalSearchResult_ListView" IsGroupPanelVisible="True" IsFooterVisible="True" />
   </Views>
 </Application>

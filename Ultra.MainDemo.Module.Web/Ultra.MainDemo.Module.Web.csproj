@@ -47,10 +47,6 @@
   <ItemGroup Condition=" '$(Configuration)' == '18_2_6_1' ">
     <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.6" />
   </ItemGroup>
-  <!--Nuget Reference Section-->
-  <Target Name="CopyPackage" AfterTargets="Pack">
-    <Copy SourceFiles="bin\$(ConfigurationName)\$(PackageId).$(PackageVersion).nupkg" DestinationFolder="C:\Users\Joche\Documents\MyNugets\" />
-  </Target>
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
