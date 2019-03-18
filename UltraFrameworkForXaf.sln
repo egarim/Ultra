@@ -26,11 +26,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Build.bat = Build.bat
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ultra.MainDemo.Module", "Ultra.MainDemo.Module\Ultra.MainDemo.Module.csproj", "{C1718841-6424-4FE1-958B-2D22472110A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ultra.MainDemo.Module", "Ultra.MainDemo.Module\Ultra.MainDemo.Module.csproj", "{C1718841-6424-4FE1-958B-2D22472110A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ultra.MainDemo.Module.Win", "Ultra.MainDemo.Module.Win\Ultra.MainDemo.Module.Win.csproj", "{4361252B-676C-40C3-B447-767AB1B31304}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ultra.MainDemo.Module.Win", "Ultra.MainDemo.Module.Win\Ultra.MainDemo.Module.Win.csproj", "{4361252B-676C-40C3-B447-767AB1B31304}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ultra.MainDemo.Module.Web", "Ultra.MainDemo.Module.Web\Ultra.MainDemo.Module.Web.csproj", "{40BA4407-A2CF-4826-96C5-557A3B30EDA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ultra.MainDemo.Module.Web", "Ultra.MainDemo.Module.Web\Ultra.MainDemo.Module.Web.csproj", "{40BA4407-A2CF-4826-96C5-557A3B30EDA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
