@@ -6,7 +6,7 @@ This module helps you search across all your persistent classes and present a un
 ### Setup
 
 - Add to your agnostic module project the nuget package that matches your current version of XAF
-- Add the module to the require modules (in Module.Designer.cs or Module.Designer.vb) as show below
+- Add the module to the require modules (in Module.Designer.cs or Module.Designer.vb) as shown below
 
 ### C#
 ```
