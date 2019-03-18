@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net462</TargetFramework>
+    <Configurations>Debug;Release;18_2_3_1;18_2_4_1;18_2_5_1;18_2_6_1</Configurations>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <ApplicationIcon />
     <OutputType>WinExe</OutputType>
@@ -8,44 +9,48 @@
   </PropertyGroup>
   <!--Debug Build Reference-->
   <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.6" />
     <PackageReference Include="DevExpress.ExpressApp.Win.All" Version="18.2.6" />
-    <PackageReference Include="DevExpress.ExpressApp" Version="18.2.6" />
-    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="18.2.6" />
     <PackageReference Include="DevExpress.ExpressApp.Security.Xpo" Version="18.2.6" />
+    <ProjectReference Include="..\Ultra.MainDemo.Module.Win\Ultra.MainDemo.Module.Win.csproj" />
+    <ProjectReference Include="..\Ultra.MainDemo.Module\Ultra.MainDemo.Module.csproj" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <!--Debug Build Reference-->
   <ItemGroup Condition=" '$(Configuration)' == '18_2_3_1' ">
-    <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.3" />
     <PackageReference Include="DevExpress.ExpressApp.Win.All" Version="18.2.3" />
-    <PackageReference Include=" DevExpress.ExpressApp" Version="18.2.3" />
+    <PackageReference Include="DevExpress.ExpressApp.Security.Xpo" Version="18.2.3" />
+    <ProjectReference Include="..\Ultra.MainDemo.Module.Win\Ultra.MainDemo.Module.Win.csproj" />
+    <ProjectReference Include="..\Ultra.MainDemo.Module\Ultra.MainDemo.Module.csproj" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup Condition=" '$(Configuration)' == '18_2_4_1' ">
-    <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.4" />
     <PackageReference Include="DevExpress.ExpressApp.Win.All" Version="18.2.4" />
-    <PackageReference Include=" DevExpress.ExpressApp" Version="18.2.4" />
+    <PackageReference Include="DevExpress.ExpressApp.Security.Xpo" Version="18.2.4" />
+    <ProjectReference Include="..\Ultra.MainDemo.Module.Win\Ultra.MainDemo.Module.Win.csproj" />
+    <ProjectReference Include="..\Ultra.MainDemo.Module\Ultra.MainDemo.Module.csproj" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup Condition=" '$(Configuration)' == '18_2_5_1' ">
-    <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.5" />
     <PackageReference Include="DevExpress.ExpressApp.Win.All" Version="18.2.5" />
-    <PackageReference Include=" DevExpress.ExpressApp" Version="18.2.5" />
+    <PackageReference Include="DevExpress.ExpressApp.Security.Xpo" Version="18.2.5" />
+    <ProjectReference Include="..\Ultra.MainDemo.Module.Win\Ultra.MainDemo.Module.Win.csproj" />
+    <ProjectReference Include="..\Ultra.MainDemo.Module\Ultra.MainDemo.Module.csproj" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup Condition=" '$(Configuration)' == '18_2_6_1' ">
-    <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.6" />
     <PackageReference Include="DevExpress.ExpressApp.Win.All" Version="18.2.6" />
-    <PackageReference Include=" DevExpress.ExpressApp" Version="18.2.6" />
+    <PackageReference Include="DevExpress.ExpressApp.Security.Xpo" Version="18.2.6" />
+    <ProjectReference Include="..\Ultra.MainDemo.Module.Win\Ultra.MainDemo.Module.Win.csproj" />
+    <ProjectReference Include="..\Ultra.MainDemo.Module\Ultra.MainDemo.Module.csproj" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Ultra.MainDemo.Module.Win\Ultra.MainDemo.Module.Win.csproj" />
-    <ProjectReference Include="..\Ultra.MainDemo.Module\Ultra.MainDemo.Module.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System.Windows.Forms" />
-  </ItemGroup>
+ 
 </Project>
