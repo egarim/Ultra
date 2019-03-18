@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net452</TargetFramework>
+    <TargetFramework>net462</TargetFramework>
     <Configurations>Debug;Release;18_2_3_1;18_2_4_1;18_2_5_1;18_2_6_1</Configurations>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <Authors>Jose Manuel Ojeda Melgar</Authors>
