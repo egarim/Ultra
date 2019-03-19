@@ -1,5 +1,35 @@
-﻿<?xml version="1.0" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Application>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="18.2.6.0" IsNewNode="True" />
+  </SchemaModules>
   <Views>
+    <DetailView Id="Script_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="22.044088176352705">
+            <LayoutGroup Id="Script" RelativeSize="100">
+              <LayoutItem Id="Language" RelativeSize="29.09090909090909" />
+              <LayoutItem Id="Name" RelativeSize="21.818181818181817" />
+              <LayoutItem Id="Description" RelativeSize="21.818181818181817" />
+              <LayoutItem Id="Assembly" RelativeSize="27.272727272727273" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="77.9559118236473" Caption="SizeableEditors">
+            <TabbedGroup Id="Item1" CaptionLocation="Top" Index="0" RelativeSize="79.691516709511575" IsNewNode="True">
+              <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="Script" IsNewNode="True">
+                <LayoutItem Id="ScriptCode" ShowCaption="False" ViewItem="ScriptCode" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="ScriptAssemblyReferences_Group" ShowCaption="True" Caption="Script Assembly References" Index="1" RelativeSize="100" IsNewNode="True">
+                <LayoutItem Id="ScriptAssemblyReferences" ViewItem="ScriptAssemblyReferences" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+            </TabbedGroup>
+            <LayoutItem Id="CompilationResult" RelativeSize="20.308483290488432" Index="1" />
+            <LayoutItem Id="ScriptCode" ViewItem="ScriptCode" Index="1" RelativeSize="50" Removed="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="ScriptAssemblyReferences_Group" Removed="True" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
   </Views>
 </Application>

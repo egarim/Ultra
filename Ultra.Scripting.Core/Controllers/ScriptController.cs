@@ -204,6 +204,14 @@ namespace Ultra.Scripting.Core.Controllers
                 if (!result.Success)
                 {
                     CompilationReult(CurrentCode, result);
+                    MessageOptions options = new MessageOptions();
+                    options.Duration = 5000;
+                    options.Message = string.Format("There are compilation errors, please check the compilation result");
+                    options.Type = InformationType.Error;
+                    options.Web.Position = InformationPosition.Bottom;
+                    options.Win.Caption = "Error";
+                    options.Win.Type = WinMessageType.Flyout;
+                    Application.ShowViewStrategy.ShowMessage(options);
                 }
                 else
                 {
@@ -218,6 +226,15 @@ namespace Ultra.Scripting.Core.Controllers
 
                     if (this.View.ObjectSpace.IsModified)
                         this.View.ObjectSpace.CommitChanges();
+
+                    MessageOptions options = new MessageOptions();
+                    options.Duration = 5000;
+                    options.Message = string.Format("Compilation is completed!");
+                    options.Type = InformationType.Success;
+                    options.Web.Position = InformationPosition.Top;
+                    options.Win.Caption = "Success";
+                    options.Win.Type = WinMessageType.Flyout;
+                    Application.ShowViewStrategy.ShowMessage(options);
 
                     //ExecuteAssemblyCode(assembly);
                 }

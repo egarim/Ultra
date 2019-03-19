@@ -4,13 +4,18 @@
     <Configurations>Debug;Release;18_2_3_1;18_2_4_1;18_2_5_1;18_2_6_1</Configurations>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <Authors>Jose Manuel Ojeda Melgar</Authors>
-    <PackageTags>Joche Ojeda, XAF, Express Application Framework,DevExpress,Ultra,</PackageTags>
+    <PackageTags>JocheOjeda XAF ExpressApplicationFramework DevExpress Ultra </PackageTags>
     <Company>BIT Frameworks</Company>
     <Description>Module description</Description>
     <DebugType>full</DebugType>
     <PackageProjectUrl>URL</PackageProjectUrl>
-    <DebugSymbols>true</DebugSymbols> 
+    <DebugSymbols>true</DebugSymbols>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)" />
+  </ItemGroup>
   <!--Nuget Generation Section-->
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_3_1|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -31,27 +36,36 @@
   <!--Nuget Generation Section-->
   <!--Nuget Reference Section-->
   <!--Debug Build Reference-->
+ 
   <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.6" />
+    <PackageReference Include="DevExpress.ExpressApp.Win.All" Version="18.2.6" />
   </ItemGroup>
   <!--Debug Build Reference-->
   <ItemGroup Condition=" '$(Configuration)' == '18_2_3_1' ">
-    <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.3" />
+    <PackageReference Include="DevExpress.ExpressApp.Win.All" Version="18.2.3" />
   </ItemGroup>
   <ItemGroup Condition=" '$(Configuration)' == '18_2_4_1' ">
-    <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.4" />
+    <PackageReference Include="DevExpress.ExpressApp.Win.All" Version="18.2.4" />
   </ItemGroup>
   <ItemGroup Condition=" '$(Configuration)' == '18_2_5_1' ">
-    <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.5" />
+    <PackageReference Include="DevExpress.ExpressApp.Win.All" Version="18.2.5" />
   </ItemGroup>
   <ItemGroup Condition=" '$(Configuration)' == '18_2_6_1' ">
-    <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.6" />
+    <PackageReference Include="DevExpress.ExpressApp.Win.All" Version="18.2.6" />
   </ItemGroup>
+  <!--Nuget Reference Section-->
+  <Target Name="CopyPackage" AfterTargets="Pack">
+    <Copy SourceFiles="bin\$(ConfigurationName)\$(PackageId).$(PackageVersion).nupkg" DestinationFolder="C:\Users\Joche\Documents\MyNugets\" />
+  </Target>
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Ultra.MainDemo.Module\Ultra.MainDemo.Module.csproj" />
-    <ProjectReference Include="..\Ultra.Scripting.Core.Win\Ultra.Scripting.Core.Win.csproj" />
+    <ProjectReference Include="..\Ultra.Scripting.Core\Ultra.Scripting.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Windows.Forms.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

@@ -1,0 +1,249 @@
+﻿'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: DefaultDomain): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_64\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: DefaultDomain): Loaded 'C:\Users\Joche\source\repos\Ultra.MainDemo\Ultra.MainDemo.Win\bin\Debug\net462\Ultra.MainDemo.Win.exe'. Symbols loaded.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.ExpressApp.Win.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.ExpressApp.Win.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.ExpressApp.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.ExpressApp.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.ExpressApp.Security.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.ExpressApp.Security.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19.03.19 09:43:26.602	================================================================================
+19.03.19 09:43:26.603	Trace Log for Ultra.MainDemo.Win.exe is started
+19.03.19 09:43:26.604	================================================================================
+19.03.19 09:43:26.608	System Environment
+	OS Version: Microsoft Windows NT 6.2.9200.0
+	.Net Framework Versions: v2.0.50727, v4.0.30319
+	CLR Version: 4.0.30319.42000
+	eXpressApp Version: 18.2.6.0
+	eXpressApp File Version: 18.2.6.0
+
+Application config
+	Modules=
+	NewVersionServer=
+	EnableDiagnosticActions=False
+
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.Persistent.Base.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.Persistent.Base.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.Utils.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.Utils.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.Data.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.Data.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraEditors.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.XtraEditors.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraBars.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.XtraBars.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19.03.19 09:43:26.735	Initialize application
+=======================
+19.03.19 09:43:26.739		Command line arguments: 
+		C:\Users\Joche\source\repos\Ultra.MainDemo\Ultra.MainDemo.Win\bin\Debug\net462\Ultra.MainDemo.Win.exe
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Users\Joche\source\repos\Ultra.MainDemo\Ultra.MainDemo.Win\bin\Debug\net462\Ultra.MainDemo.Module.dll'. Symbols loaded.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Users\Joche\source\repos\Ultra.MainDemo\Ultra.MainDemo.Win\bin\Debug\net462\Ultra.MainDemo.Module.Win.dll'. Symbols loaded.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.ExpressApp.Validation.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.ExpressApp.Validation.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.ExpressApp.Validation.Win.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.ExpressApp.Validation.Win.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.Persistent.BaseImpl.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.Persistent.BaseImpl.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.Xpo.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.Xpo.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.Printing.v18.2.Core\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.Printing.v18.2.Core.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Users\Joche\source\repos\Ultra.MainDemo\Ultra.MainDemo.Win\bin\Debug\net462\Ultra.UniversalSearch.dll'. Symbols loaded.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Users\Joche\source\repos\Ultra.MainDemo\Ultra.MainDemo.Win\bin\Debug\net462\Ultra.Scripting.Core.dll'. Symbols loaded.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Users\Joche\source\repos\Ultra.MainDemo\Ultra.MainDemo.Win\bin\Debug\net462\Ultra.Scripting.Core.Win.dll'. Symbols loaded.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'Anonymously Hosted DynamicMethods Assembly'. 
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.ExpressApp.Security.Xpo.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.ExpressApp.Security.Xpo.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_64\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\UIAutomationClient\v4.0_4.0.0.0__31bf3856ad364e35\UIAutomationClient.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.ExpressApp.Xpo.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.ExpressApp.Xpo.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19.03.19 09:43:27.497	The ValueManagerType is initialized by the default value: SimpleValueManager.
+19.03.19 09:43:27.501	Stack trace:
+   at DevExpress.Persistent.Base.ValueManager.CreateValueManager[ValueType](String key)
+   at DevExpress.Persistent.Base.ValueManager.GetValueManager[ValueType](String key)
+   at DevExpress.ExpressApp.Xpo.InMemoryDataStoreProvider..cctor()
+   at DevExpress.ExpressApp.Xpo.XPObjectSpaceProvider.GetDataStoreProvider(String connectionString, IDbConnection connection, Boolean enablePoolingInConnectionString)
+   at Ultra.MainDemo.Win.MainDemoWindowsFormsApplication.CreateDefaultObjectSpaceProvider(CreateCustomObjectSpaceProviderEventArgs args)
+   at DevExpress.ExpressApp.XafApplication.CreateObjectSpaceProviders(String connectionString)
+   at DevExpress.ExpressApp.XafApplication.Setup()
+   at Ultra.MainDemo.Win.Program.Main()
+
+19.03.19 09:43:27.569	--------------------------------------------------------------------------------
+							Initialize Modules Manager
+
+19.03.19 09:43:27.573	--------------------------------------------------------------------------------
+							
+
+19.03.19 09:43:27.587	--------------------------------------------------------------------------------
+Loaded assemblies
+	Anonymously Hosted DynamicMethods Assembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null, Location=InMemory Module
+	DevExpress.Data.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, Location=C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.Data.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.Data.v18.2.dll
+	DevExpress.ExpressApp.Security.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, Location=C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.ExpressApp.Security.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.ExpressApp.Security.v18.2.dll
+	DevExpress.ExpressApp.Security.Xpo.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, Location=C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.ExpressApp.Security.Xpo.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.ExpressApp.Security.Xpo.v18.2.dll
+	DevExpress.ExpressApp.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, Location=C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.ExpressApp.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.ExpressApp.v18.2.dll
+	DevExpress.ExpressApp.Validation.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, Location=C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.ExpressApp.Validation.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.ExpressApp.Validation.v18.2.dll
+	DevExpress.ExpressApp.Validation.Win.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, Location=C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.ExpressApp.Validation.Win.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.ExpressApp.Validation.Win.v18.2.dll
+	DevExpress.ExpressApp.Win.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, Location=C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.ExpressApp.Win.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.ExpressApp.Win.v18.2.dll
+	DevExpress.ExpressApp.Xpo.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, Location=C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.ExpressApp.Xpo.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.ExpressApp.Xpo.v18.2.dll
+	DevExpress.Persistent.Base.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, Location=C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.Persistent.Base.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.Persistent.Base.v18.2.dll
+	DevExpress.Persistent.BaseImpl.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, Location=C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.Persistent.BaseImpl.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.Persistent.BaseImpl.v18.2.dll
+	DevExpress.Printing.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, Location=C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.Printing.v18.2.Core\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.Printing.v18.2.Core.dll
+	DevExpress.Utils.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, Location=C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.Utils.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.Utils.v18.2.dll
+	DevExpress.Xpo.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, Location=C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.Xpo.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.Xpo.v18.2.dll
+	DevExpress.XtraBars.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, Location=C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraBars.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.XtraBars.v18.2.dll
+	DevExpress.XtraEditors.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, Location=C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraEditors.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.XtraEditors.v18.2.dll
+	mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, Location=C:\Windows\Microsoft.NET\Framework64\v4.0.30319\mscorlib.dll
+	System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, Location=C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll
+	System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, Location=C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll
+	System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, Location=C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll
+	System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, Location=C:\Windows\Microsoft.Net\assembly\GAC_64\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll
+	System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, Location=C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll
+	System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, Location=C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll
+	System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, Location=C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll
+	UIAutomationClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, Location=C:\Windows\Microsoft.Net\assembly\GAC_MSIL\UIAutomationClient\v4.0_4.0.0.0__31bf3856ad364e35\UIAutomationClient.dll
+	Ultra.MainDemo.Module, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null, Location=C:\Users\Joche\source\repos\Ultra.MainDemo\Ultra.MainDemo.Win\bin\Debug\net462\Ultra.MainDemo.Module.dll
+	Ultra.MainDemo.Module.Win, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null, Location=C:\Users\Joche\source\repos\Ultra.MainDemo\Ultra.MainDemo.Win\bin\Debug\net462\Ultra.MainDemo.Module.Win.dll
+	Ultra.MainDemo.Win, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null, Location=C:\Users\Joche\source\repos\Ultra.MainDemo\Ultra.MainDemo.Win\bin\Debug\net462\Ultra.MainDemo.Win.exe
+	Ultra.Scripting.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null, Location=C:\Users\Joche\source\repos\Ultra.MainDemo\Ultra.MainDemo.Win\bin\Debug\net462\Ultra.Scripting.Core.dll
+	Ultra.Scripting.Core.Win, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null, Location=C:\Users\Joche\source\repos\Ultra.MainDemo\Ultra.MainDemo.Win\bin\Debug\net462\Ultra.Scripting.Core.Win.dll
+	Ultra.UniversalSearch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null, Location=C:\Users\Joche\source\repos\Ultra.MainDemo\Ultra.MainDemo.Win\bin\Debug\net462\Ultra.UniversalSearch.dll
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraLayout.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.XtraLayout.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.RichEdit.v18.2.Core\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.RichEdit.v18.2.Core.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.BonusSkins.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.BonusSkins.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_64\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19.03.19 09:43:27.894	SetupModules
+19.03.19 09:43:28.234	Customize TypesInfo
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraReports.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.XtraReports.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\Accessibility\v4.0_4.0.0.0__b03f5f7f11d50a3a\Accessibility.dll'. Cannot find or open the PDB file.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.ComponentModel.DataAnnotations\v4.0_4.0.0.0__31bf3856ad364e35\System.ComponentModel.DataAnnotations.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 's4sdccr1'. Module was built without symbols.
+19.03.19 09:43:30.326		preferredLanguageName: (User language)
+								userLanguageName: en-US
+
+19.03.19 09:43:30.329		preferredLanguageName: (User language)
+								userFormattingCultureName: en-US
+								selectedFormattingCultureName: 
+
+19.03.19 09:43:30.333	Logon With Parameters
+19.03.19 09:43:30.337		Type: DevExpress.ExpressApp.Actions.PopupWindowShowAction
+								ID: 36d80618-8b5c-4489-9b61-316e6fe64298
+								Category: Unspecified
+
+19.03.19 09:43:31.384	Generate default Model for Action containers
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.Images.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.Images.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.Mvvm.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.Mvvm.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19.03.19 09:43:39.949	--------------------------------------------------------------------------------
+							Execute action
+
+19.03.19 09:43:39.950		Type: DevExpress.ExpressApp.Actions.SimpleAction
+								ID: Logon
+								Category: PopupActions
+								Controller.Name: DevExpress.ExpressApp.LogonController
+								Context.Name: Log In
+								Context.IsRoot: True
+								Context.SelectedObjects.Count: 1
+								Context.CurrentObject: DevExpress.ExpressApp.Security.AuthenticationStandardLogonParameters
+
+19.03.19 09:43:39.953	--------------------------------------------------------------------------------
+							Execute action
+
+19.03.19 09:43:39.953		Type: DevExpress.ExpressApp.Actions.PopupWindowShowAction
+								ID: 36d80618-8b5c-4489-9b61-316e6fe64298
+								Category: Unspecified
+
+19.03.19 09:43:39.977	--------------------------------------------------------------------------------
+							Start logon process
+
+19.03.19 09:43:39.981	--------------------------------------------------------------------------------
+							Checking Compatibility
+
+19.03.19 09:43:39.987		ConnectionString: Integrated Security=SSPI;Pooling=false;Data Source=(localdb)\mssqllocaldb;Initial Catalog=Ultra.MainDemo;XpoDataStorePool=True;
+19.03.19 09:43:39.988		ConnectionString: 
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.ServiceModel\v4.0_4.0.0.0__b77a5c561934e089\System.ServiceModel.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Serialization\v4.0_4.0.0.0__b77a5c561934e089\System.Runtime.Serialization.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.Services\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_64\System.Transactions\v4.0_4.0.0.0__b77a5c561934e089\System.Transactions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19.03.19 09:43:50.059	--------------------------------------------------------------------------------
+							UpdateDB
+
+The thread 0x3f48 has exited with code 0 (0x0).
+The thread 0x2a2c has exited with code 0 (0x0).
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_64\System.EnterpriseServices\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_64\System.EnterpriseServices\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.Wrapper.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19.03.19 09:44:00.227		ConnectionString: Integrated Security=SSPI;Pooling=false;Data Source=(localdb)\mssqllocaldb;Initial Catalog=Ultra.MainDemo;XpoDataStorePool=True;
+19.03.19 09:44:01.199	--------------------------------------------------------------------------------
+							Logon successful
+
+19.03.19 09:44:01.206	--------------------------------------------------------------------------------
+							Logon completed
+
+19.03.19 09:44:01.213	Action '36d80618-8b5c-4489-9b61-316e6fe64298' done
+19.03.19 09:44:01.218	Window closing: Log In
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraTreeList.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.XtraTreeList.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraVerticalGrid.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.XtraVerticalGrid.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraGrid.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.XtraGrid.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19.03.19 09:44:01.255	Action 'Logon' done
+19.03.19 09:44:01.257	Window closed: Log In
+19.03.19 09:44:01.369		startUpActions: 1
+19.03.19 09:44:01.404	--------------------------------------------------------------------------------
+							Initialize 'ShowNavigationItem' action items
+
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraNavBar.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.XtraNavBar.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19.03.19 09:44:03.022	--------------------------------------------------------------------------------
+							Execute action
+
+19.03.19 09:44:03.022		Type: DevExpress.ExpressApp.Actions.SingleChoiceAction
+								ID: ShowNavigationItem
+								Category: ViewsNavigation
+								Controller.Name: DevExpress.ExpressApp.SystemModule.ShowNavigationItemController
+
+19.03.19 09:44:03.023		SelectedItem: Country
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.XtraRichEdit.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.XtraRichEdit.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\WindowsBase\v4.0_4.0.0.0__31bf3856ad364e35\WindowsBase.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Data.Linq\v4.0_4.0.0.0__b77a5c561934e089\System.Data.Linq.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19.03.19 09:44:04.506	Action 'ShowNavigationItem' done
+19.03.19 09:44:04.513	Application startup done
+=========================
+19.03.19 09:44:04.513	Application running
+====================
+19.03.19 09:44:09.301	--------------------------------------------------------------------------------
+							Execute action
+
+19.03.19 09:44:09.302		Type: DevExpress.ExpressApp.Actions.SingleChoiceAction
+								ID: ShowNavigationItem
+								Category: ViewsNavigation
+								Controller.Name: DevExpress.ExpressApp.SystemModule.ShowNavigationItemController
+								Context.Name: Country
+								Context.IsRoot: True
+								Context.SelectedObjects.Count: 1
+								Context.CurrentObject: Chile
+
+19.03.19 09:44:09.303		SelectedItem: Script
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.Office.v18.2.Core\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.Office.v18.2.Core.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19.03.19 09:44:09.600	Action 'ShowNavigationItem' done
+19.03.19 09:44:10.493	--------------------------------------------------------------------------------
+							Execute action
+
+19.03.19 09:44:10.494		Type: DevExpress.ExpressApp.Actions.SingleChoiceAction
+								ID: New
+								Category: ObjectsCreation
+								Controller.Name: DevExpress.ExpressApp.Win.SystemModule.WinNewObjectViewController
+								Context.Name: Script
+								Context.IsRoot: True
+								Context.SelectedObjects.Count: 0
+								Context.CurrentObject: <not specified>
+
+19.03.19 09:44:10.494		SelectedItem: Script
+The thread 0x2980 has exited with code 0 (0x0).
+'Ultra.MainDemo.Win.exe' (CLR v4.0.30319: Ultra.MainDemo.Win.exe): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\DevExpress.CodeParser.v18.2\v4.0_18.2.6.0__b88d1754d700e49a\DevExpress.CodeParser.v18.2.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+19.03.19 09:44:12.133	The "Ultra.Scripting.Core.BusinessObjects.ScriptAssemblyReference" type declared with the DefaultProperty value of "AssemlyName" doesn't contain this property or the property is declared as private
+19.03.19 09:44:12.468	Action 'New' done
+19.03.19 09:44:24.249	Window closing: Script
+19.03.19 09:44:24.256	ConfirmationRequest: NeedSaveChanges
+19.03.19 09:44:24.257		DefaultConfirmationResult: No
+19.03.19 09:44:25.314		UserConfirmationResult: No
+19.03.19 09:44:25.334	Window closed: Script
+The thread 0xc78 has exited with code 0 (0x0).
+19.03.19 09:44:27.217	Window closing: Script - Ultra.MainDemo.Win
+19.03.19 09:44:27.247	Window closed: Script - Ultra.MainDemo.Win
+19.03.19 09:44:27.445	Save model changes
+===================
+19.03.19 09:44:27.465	Save model changes
+===================
+19.03.19 09:44:27.467	--------------------------------------------------------------------------------
+							Logoff completed
+
+19.03.19 09:44:27.468	Application stopping
+=====================
+The program '[11820] Ultra.MainDemo.Win.exe' has exited with code 0 (0x0).

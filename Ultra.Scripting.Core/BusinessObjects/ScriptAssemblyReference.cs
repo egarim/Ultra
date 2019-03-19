@@ -15,7 +15,7 @@ using DevExpress.Persistent.Validation;
 namespace Ultra.Scripting.Core.BusinessObjects
 {
     //[ImageName("BO_Contact")]
-    [DefaultProperty("AssemlyName")]
+    [DefaultProperty("AssemblyName")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
     //[Persistent("DatabaseTableName")]
     // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).

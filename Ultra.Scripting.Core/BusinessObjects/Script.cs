@@ -18,6 +18,15 @@ namespace Ultra.Scripting.Core.BusinessObjects
 {
     [NavigationItem("Scripting")]
     [DefaultClassOptions]
+    public class ScriptTemplate : Script
+    {
+        public ScriptTemplate(Session session) : base(session)
+        {
+        }
+    }
+
+    [NavigationItem("Scripting")]
+    [DefaultClassOptions]
     //[ImageName("BO_Contact")]
     //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
@@ -56,7 +65,7 @@ namespace Ultra.Scripting.Core.BusinessObjects
         private FileData _Assembly;
         private string _ScriptCode;
 
-        [ModelDefault("PropertyEditorType", "BIT.XAF.ScriptingWin.CodeEditor")]
+        [ModelDefault("PropertyEditorType", "Ultra.Scripting.Core.Win.CodeEditor")]
         [Size(SizeAttribute.Unlimited)]
         public string ScriptCode
         {

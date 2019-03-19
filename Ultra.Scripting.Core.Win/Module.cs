@@ -15,14 +15,14 @@ using DevExpress.ExpressApp.Model.Core;
 using DevExpress.ExpressApp.Model.DomainLogics;
 using DevExpress.ExpressApp.Model.NodeGenerators;
 using DevExpress.ExpressApp.Xpo;
-using Ultra.Scripting.Core.Updaters;
+using Ultra.Scripting.Core.Win.Updaters;
 
-namespace Ultra.Scripting.Core
+namespace Ultra.Scripting.Core.Win
 {
     // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppModuleBasetopic.aspx.
-    public sealed partial class ScriptingCoreModule : ModuleBase
+    public sealed partial class UltraScriptingCoreWin : ModuleBase
     {
-        public ScriptingCoreModule()
+        public UltraScriptingCoreWin()
         {
             InitializeComponent();
 
@@ -57,16 +57,22 @@ namespace Ultra.Scripting.Core
         protected override IEnumerable<Type> GetDeclaredExportedTypes()
         {
             //TODO return an array of types to improve performance
-            return new Type[] {
-                typeof(BusinessObjects.Script),typeof(BusinessObjects.ScriptAssemblyReference),typeof(BusinessObjects.ScriptTemplate)
-            };
+            //return new Type[] {
+            //    typeof(BIT.XAF.DataImport.BusinessObjects.ImportMap),
+
+            //};
+            return base.GetDeclaredExportedTypes();
         }
 
         protected override IEnumerable<Type> GetDeclaredControllerTypes()
         {
-            return new Type[] {
-                typeof(Scripting.Core.Controllers.ScriptController)
-            };
+            //TODO return an array of types to improve performance
+
+            //return new Type[] {
+            //    typeof(ImportControllerExcel),typeof(DisableNestedObjectActions),
+            //    typeof(ShowDataDictionary), typeof(DataDictionaryController)
+            //};
+            return base.GetDeclaredControllerTypes();
         }
     }
 }
