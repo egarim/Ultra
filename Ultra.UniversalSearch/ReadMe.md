@@ -52,7 +52,7 @@ End Class
 
 ### Note
 
-As we can see in the UniversalSearchAttribute definition bellow the DisplayProperties, and DisplayPropertiesStringFormat parameters are just for presentation purposes once the search has successfully found results. The actual search function will iterate over every property of your class and match your search term accordingly. If you want to explore more take a peek at the method ICollection<String> GetFullTextSearchProperties(ITypeInfo TypeInfo) where all the magic happens.
+As we can see in the UniversalSearchAttribute definition bellow the DisplayProperties, and DisplayPropertiesStringFormat parameters are just for presentation purposes once the search has successfully found results. The actual search function will iterate over every property of your class and match your search term accordingly.
 
 ```
 public UniversalSearchAttribute(string DisplayProperties, string DisplayPropertiesStringFormat)
@@ -64,6 +64,7 @@ public UniversalSearchAttribute(string DisplayProperties, string DisplayProperti
 		}
 ```
 
+If you want to explore more take a peek at the method ICollection<String> GetFullTextSearchProperties(ITypeInfo TypeInfo) where all the magic happens.
 
 ### Tip 
 
