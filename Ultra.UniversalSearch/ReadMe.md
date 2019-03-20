@@ -47,3 +47,45 @@ End Class
 
 ### Demo
 ![Ultra Universal Search](UltraUniversalSearch.gif)
+
+
+
+### Note
+
+As we can see in the UniversalSearchAttribute definition bellow the DisplayProperties, and DisplayPropertiesStringFormat parameters are just for presentation purposes once the search has successfully found results. The actual search function will iterate over every property of your class and match your search term accordingly. 
+
+```
+public UniversalSearchAttribute(string DisplayProperties, string DisplayPropertiesStringFormat)
+		{
+			Guard.ArgumentNotNullOrEmpty(DisplayProperties, "DisplayProperties");
+			Guard.ArgumentNotNullOrEmpty(DisplayPropertiesStringFormat, "DisplayPropertiesStringFormat");
+			this.DisplayProperties = DisplayProperties;
+			this.DisplayPropertiesStringFormat = DisplayPropertiesStringFormat;
+		}
+```
+
+
+### Tip 
+
+When using composition in your DisplayProperties make sure to also include the property or field you want to actually be displayed. This will avoid showing in your search results an ugly looking Oid string.  Example: Customer.Name instead of Customer will suffice.
+
+```
+[UniversalSearchAttribute("InvoiceNumber;Customer.Name", "Invoice Number:{0} - Customer:{1}")]
+    public class Invoice : BaseObject
+    {  
+        
+        public Customer Customer
+        {
+            get => customer;
+            set => SetPropertyValue(nameof(Customer), ref customer, value);
+        }
+        
+        public string InvoiceNumber
+        {
+            get => invoiceNumber;
+            set => SetPropertyValue(nameof(InvoiceNumber), ref invoiceNumber, value);
+        }
+    }
+
+```
+
