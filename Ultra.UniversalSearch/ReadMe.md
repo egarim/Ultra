@@ -47,3 +47,53 @@ End Class
 
 ### Demo
 ![Ultra Universal Search](UltraUniversalSearch.gif)
+
+
+
+### Note
+
+As we can see in the UniversalSearchAttribute definition bellow the DisplayProperties, and DisplayPropertiesStringFormat parameters are just for presentation purposes once the search has successfully found results. The actual search function will iterate over every property of your class and match your search term accordingly.
+
+```
+public UniversalSearchAttribute(string DisplayProperties, string DisplayPropertiesStringFormat)
+		{
+			Guard.ArgumentNotNullOrEmpty(DisplayProperties, "DisplayProperties");
+			Guard.ArgumentNotNullOrEmpty(DisplayPropertiesStringFormat, "DisplayPropertiesStringFormat");
+			this.DisplayProperties = DisplayProperties;
+			this.DisplayPropertiesStringFormat = DisplayPropertiesStringFormat;
+		}
+```
+
+If you want to explore more take a peek at the method ICollection<String> GetFullTextSearchProperties(ITypeInfo TypeInfo) where all the magic happens.
+
+### Tip 
+
+When using composition in your DisplayProperties make sure to also include the property or field you want to actually be displayed. This will avoid showing in your search results an ugly looking Oid string.  Example: Customer.Name instead of Customer will suffice.
+
+```
+[UniversalSearchAttribute("InvoiceNumber;Customer.Name", "Invoice Number:{0} - Customer:{1}")]
+    public class Invoice : BaseObject
+    {  
+        
+        public Customer Customer
+        {
+            get => customer;
+            set => SetPropertyValue(nameof(Customer), ref customer, value);
+        }
+        
+        public string InvoiceNumber
+        {
+            get => invoiceNumber;
+            set => SetPropertyValue(nameof(InvoiceNumber), ref invoiceNumber, value);
+        }
+    }
+
+```
+### Want To Support This Project?
+
+There are several ways in which you can contribute. Here are some:
+
+- Send a pull-request to this repository with your suggestions.
+- Share this repository with everyone who uses XAF (people, teams, communities, companies or any other entity).
+- Invite others to share this project and continue to spread the word.
+- Of course you are more than welcome to submit other features and bugfixes as well.
