@@ -1,5 +1,4 @@
-﻿### Universal Search
-
+﻿
 This module helps you search across all your persistent classes and present a unified search result
 
 
@@ -89,11 +88,3 @@ When using composition in your DisplayProperties make sure to also include the p
     }
 
 ```
-### Want To Support This Project?
-
-There are several ways in which you can contribute. Here are some:
-
-- Send a pull-request to this repository with your suggestions.
-- Share this repository with everyone who uses XAF (people, teams, communities, companies or any other entity).
-- Invite others to share this project and continue to spread the word.
-- Of course you are more than welcome to submit other features and bugfixes as well.

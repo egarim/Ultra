@@ -24,6 +24,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AEA762A3-7639-4BB5-AC4F-05770840E807}"
 	ProjectSection(SolutionItems) = preProject
 		Build.bat = Build.bat
+		ReadMe.md = ReadMe.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ultra.MainDemo.Module", "Ultra.MainDemo.Module\Ultra.MainDemo.Module.csproj", "{C1718841-6424-4FE1-958B-2D22472110A1}"
@@ -40,7 +41,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripting", "Scripting", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ultra.Scripting.Core", "Ultra.Scripting.Core\Ultra.Scripting.Core.csproj", "{CA953303-D08D-44F2-8F5A-A098B4911F6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ultra.Scripting.Core.Win", "Ultra.Scripting.Core.Win\Ultra.Scripting.Core.Win.csproj", "{1F3AECCB-959A-4938-90B5-E55C5FB15BA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ultra.Scripting.Core.Win", "Ultra.Scripting.Core.Win\Ultra.Scripting.Core.Win.csproj", "{1F3AECCB-959A-4938-90B5-E55C5FB15BA5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Email", "Email", "{48EDCF08-6E29-445A-B522-2F3B46317989}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ultra.Email", "Ultra.Email\Ultra.Email.csproj", "{95CDDDD3-D87E-4439-ACA9-5C62DCAA7ECE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -189,6 +194,20 @@ Global
 		{1F3AECCB-959A-4938-90B5-E55C5FB15BA5}.EasyTest|Any CPU.Build.0 = 18_2_5_1|Any CPU
 		{1F3AECCB-959A-4938-90B5-E55C5FB15BA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F3AECCB-959A-4938-90B5-E55C5FB15BA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95CDDDD3-D87E-4439-ACA9-5C62DCAA7ECE}.18_2_3_1|Any CPU.ActiveCfg = 18_2_3_1|Any CPU
+		{95CDDDD3-D87E-4439-ACA9-5C62DCAA7ECE}.18_2_3_1|Any CPU.Build.0 = 18_2_3_1|Any CPU
+		{95CDDDD3-D87E-4439-ACA9-5C62DCAA7ECE}.18_2_4_1|Any CPU.ActiveCfg = 18_2_4_1|Any CPU
+		{95CDDDD3-D87E-4439-ACA9-5C62DCAA7ECE}.18_2_4_1|Any CPU.Build.0 = 18_2_4_1|Any CPU
+		{95CDDDD3-D87E-4439-ACA9-5C62DCAA7ECE}.18_2_5_1|Any CPU.ActiveCfg = 18_2_5_1|Any CPU
+		{95CDDDD3-D87E-4439-ACA9-5C62DCAA7ECE}.18_2_5_1|Any CPU.Build.0 = 18_2_5_1|Any CPU
+		{95CDDDD3-D87E-4439-ACA9-5C62DCAA7ECE}.18_2_6_1|Any CPU.ActiveCfg = 18_2_6_1|Any CPU
+		{95CDDDD3-D87E-4439-ACA9-5C62DCAA7ECE}.18_2_6_1|Any CPU.Build.0 = 18_2_6_1|Any CPU
+		{95CDDDD3-D87E-4439-ACA9-5C62DCAA7ECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95CDDDD3-D87E-4439-ACA9-5C62DCAA7ECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95CDDDD3-D87E-4439-ACA9-5C62DCAA7ECE}.EasyTest|Any CPU.ActiveCfg = 18_2_5_1|Any CPU
+		{95CDDDD3-D87E-4439-ACA9-5C62DCAA7ECE}.EasyTest|Any CPU.Build.0 = 18_2_5_1|Any CPU
+		{95CDDDD3-D87E-4439-ACA9-5C62DCAA7ECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95CDDDD3-D87E-4439-ACA9-5C62DCAA7ECE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -204,6 +223,7 @@ Global
 		{40BA4407-A2CF-4826-96C5-557A3B30EDA6} = {981CDA04-F703-4527-85C8-2CA817BB95AD}
 		{CA953303-D08D-44F2-8F5A-A098B4911F6A} = {C47CABC1-ABE5-43D9-886E-405A11A68335}
 		{1F3AECCB-959A-4938-90B5-E55C5FB15BA5} = {C47CABC1-ABE5-43D9-886E-405A11A68335}
+		{95CDDDD3-D87E-4439-ACA9-5C62DCAA7ECE} = {48EDCF08-6E29-445A-B522-2F3B46317989}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C2161173-BA72-4D2C-81A7-9FF62A7EB67D}

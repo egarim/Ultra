@@ -18,6 +18,7 @@ namespace Ultra.Scripting.Core.BusinessObjects
 {
     [NavigationItem("Scripting")]
     [DefaultClassOptions]
+    [ImageName("Action_ShowScript")]
     public class ScriptTemplate : Script
     {
         public ScriptTemplate(Session session) : base(session)

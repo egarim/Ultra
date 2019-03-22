@@ -1,6 +1,6 @@
-﻿namespace Ultra.MainDemo.Module
+﻿namespace Ultra.Email
 {
-    partial class UltraModuleTemplateModule
+    partial class EmailModule
     {
         /// <summary> 
         /// Required designer variable.
@@ -32,10 +32,8 @@
             // UltraModuleTemplateModule
             // 
             this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.SystemModule.SystemModule));
-            this.RequiredModuleTypes.Add(typeof(Ultra.UniversalSearch.UniversalSearchModule));
-            this.RequiredModuleTypes.Add(typeof(Ultra.Scripting.Core.ScriptingCoreModule));
-            this.RequiredModuleTypes.Add(typeof(Ultra.Email.EmailModule));
-            this.AdditionalExportedTypes.Add(typeof(Ultra.Scripting.Core.BusinessObjects.Script));
+            this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.Validation.ValidationModule));
+            
 
         }
 

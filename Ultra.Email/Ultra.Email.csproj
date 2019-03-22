@@ -1,16 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net462</TargetFramework>
+    <TargetFramework>net452</TargetFramework>
     <Configurations>Debug;Release;18_2_3_1;18_2_4_1;18_2_5_1;18_2_6_1</Configurations>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <Authors>Jose Manuel Ojeda Melgar</Authors>
-    <PackageTags>Joche Ojeda, XAF, Express Application Framework,DevExpress,Ultra,</PackageTags>
+    <PackageTags>JocheOjeda XAF ExpressApplicationFramework DevExpress Ultra </PackageTags>
     <Company>BIT Frameworks</Company>
     <Description>Module description</Description>
     <DebugType>full</DebugType>
     <PackageProjectUrl>URL</PackageProjectUrl>
-    <DebugSymbols>true</DebugSymbols> 
+    <DebugSymbols>true</DebugSymbols>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
+  </ItemGroup>
   <!--Nuget Generation Section-->
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_3_1|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -33,30 +38,25 @@
   <!--Debug Build Reference-->
   <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
     <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.6" />
-    <ProjectReference Include="..\Ultra.UniversalSearch\Ultra.UniversalSearch.csproj" />
   </ItemGroup>
   <!--Debug Build Reference-->
   <ItemGroup Condition=" '$(Configuration)' == '18_2_3_1' ">
     <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.3" />
-    <ProjectReference Include="..\Ultra.UniversalSearch\Ultra.UniversalSearch.csproj" />
   </ItemGroup>
   <ItemGroup Condition=" '$(Configuration)' == '18_2_4_1' ">
     <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.4" />
-    <ProjectReference Include="..\Ultra.UniversalSearch\Ultra.UniversalSearch.csproj" />
   </ItemGroup>
   <ItemGroup Condition=" '$(Configuration)' == '18_2_5_1' ">
     <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.5" />
-    <ProjectReference Include="..\Ultra.UniversalSearch\Ultra.UniversalSearch.csproj" />
   </ItemGroup>
   <ItemGroup Condition=" '$(Configuration)' == '18_2_6_1' ">
     <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.6" />
-    <ProjectReference Include="..\Ultra.UniversalSearch\Ultra.UniversalSearch.csproj" />
   </ItemGroup>
+  <!--Nuget Reference Section-->
+  <Target Name="CopyPackage" AfterTargets="Pack">
+    <Copy SourceFiles="bin\$(ConfigurationName)\$(PackageId).$(PackageVersion).nupkg" DestinationFolder="C:\Users\Joche\Documents\MyNugets\" />
+  </Target>
   <ItemGroup>
     <Folder Include="Properties\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Ultra.Email\Ultra.Email.csproj" />
-    <ProjectReference Include="..\Ultra.Scripting.Core\Ultra.Scripting.Core.csproj" />
   </ItemGroup>
 </Project>

@@ -49,6 +49,7 @@ namespace Ultra.Scripting.Core.Controllers
             this.saCompile.Id = "d71a4da4-e86e-4688-94f7-d0acf0591b1d";
             this.saCompile.ToolTip = null;
             this.saCompile.Execute += new DevExpress.ExpressApp.Actions.SimpleActionExecuteEventHandler(this.saCompile_Execute);
+            this.saCompile.ImageName = "Properties";
             //
             // scDetectLocalAssemblyReferences
             //
@@ -57,6 +58,7 @@ namespace Ultra.Scripting.Core.Controllers
             this.scDetectLocalAssemblyReferences.Id = "3f2bdf2c-a7c3-448c-b1aa-c44fc7041558";
             this.scDetectLocalAssemblyReferences.ToolTip = null;
             this.scDetectLocalAssemblyReferences.Execute += new DevExpress.ExpressApp.Actions.SimpleActionExecuteEventHandler(this.scDetectLocalAssemblyReferences_Execute);
+            this.scDetectLocalAssemblyReferences.ImageName = "ArrangeGroups";
             //
             // saRunScript
             //
@@ -65,6 +67,7 @@ namespace Ultra.Scripting.Core.Controllers
             this.saRunScript.Id = "9f0e8713-0411-44d1-85b9-540203b5dcee";
             this.saRunScript.ToolTip = null;
             this.saRunScript.Execute += new DevExpress.ExpressApp.Actions.SimpleActionExecuteEventHandler(this.saRunScript_Execute);
+            this.saRunScript.ImageName = "Action_Debug_Start";
             //
             // ScriptViewController
             //
