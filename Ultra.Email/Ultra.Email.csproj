@@ -8,7 +8,7 @@
     <Company>BIT Frameworks</Company>
     <Description>This module allows you to setup and use smtp email accounts in your XAF application</Description>
     <DebugType>full</DebugType>
-    <PackageProjectUrl>URL</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/egarim/Ultra/tree/master/Ultra.Email</PackageProjectUrl>
     <DebugSymbols>true</DebugSymbols>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
