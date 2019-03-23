@@ -19,16 +19,17 @@ using Ultra.Email.Updaters;
 using Ultra.Email.BusinessObjects;
 using Ultra.Email.Controllers;
 using System.Drawing;
+using DevExpress.Utils;
 
 namespace Ultra.Email
 {
-    [DevExpress.Utils.ToolboxTabName(XafAssemblyInfo.DXTabXafModules)]
+    [ToolboxTabName(XafAssemblyInfo.DXTabXafModules)]
     //TODO uncomment the filter attribute depending on the platform implementation
     //[ToolboxItemFilter("Xaf.Platform.Win")]
     //[ToolboxItemFilter("Xaf.Platform.Web")]
-    [Description("Ultra Modules for XAF: Email")]
+    [Description("Add SMTP email functionality to your XAF applications.")]
     [ToolboxItem(true)]
-    [ToolboxBitmap(typeof(EmailModule), "Resources.Message_Mail.ico")]
+    [ToolboxBitmap("Resources.Gear")]
     // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppModuleBasetopic.aspx.
     public sealed partial class EmailModule : ModuleBase
     {

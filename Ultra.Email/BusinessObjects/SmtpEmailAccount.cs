@@ -178,8 +178,10 @@ public class SmtpEmailAccount : BaseObject
         mail.From = new MailAddress(this.UserName);
 
         mail.To.Add(Instance.GetTo());
-        mail.CC.Add(Instance.GetCC());
-        mail.CC.Add(Instance.GetBCC());
+        if (Instance.GetCC() != null)
+            mail.CC.Add(Instance.GetCC());
+        if (Instance.GetBCC() != null)
+            mail.Bcc.Add(Instance.GetBCC());
         mail.Subject = Instance.GetSubject();
         mail.Body = Instance.GetBody();
 

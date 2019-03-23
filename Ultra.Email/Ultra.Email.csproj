@@ -4,9 +4,9 @@
     <Configurations>Debug;Release;18_2_3_1;18_2_4_1;18_2_5_1;18_2_6_1</Configurations>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <Authors>Jose Manuel Ojeda Melgar</Authors>
-    <PackageTags>JocheOjeda XAF ExpressApplicationFramework DevExpress Ultra </PackageTags>
+    <PackageTags>JocheOjeda XAF ExpressApplicationFramework DevExpress Ultra EmailModule</PackageTags>
     <Company>BIT Frameworks</Company>
-    <Description>Module description</Description>
+    <Description>This module allows you to setup and use smtp email accounts in your XAF application</Description>
     <DebugType>full</DebugType>
     <PackageProjectUrl>URL</PackageProjectUrl>
     <DebugSymbols>true</DebugSymbols>
@@ -61,7 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
