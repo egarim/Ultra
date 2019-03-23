@@ -17,9 +17,18 @@ using DevExpress.ExpressApp.Model.NodeGenerators;
 using DevExpress.ExpressApp.Xpo;
 using Ultra.UniversalSearch.Updaters;
 using Template.Module.Controllers;
+using System.Drawing;
 
 namespace Ultra.UniversalSearch
 {
+    //TODO uncomment the filter attribute depending on the platform implementation
+    //[ToolboxItemFilter("Xaf.Platform.Win")]
+    //[ToolboxItemFilter("Xaf.Platform.Web")]
+    [DevExpress.Utils.ToolboxTabName(XafAssemblyInfo.DXTabXafModules)]
+    //TODO module description
+    [Description("Ultra Modules for XAF: Universal Search")]
+    [ToolboxItem(true)]
+    [ToolboxBitmap(typeof(UniversalSearchModule), "Resources.User_Search02_WF.ico")]
     // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppModuleBasetopic.aspx.
     public sealed partial class UniversalSearchModule : ModuleBase
     {

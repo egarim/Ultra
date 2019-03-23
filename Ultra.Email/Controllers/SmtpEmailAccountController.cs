@@ -1,5 +1,6 @@
 ﻿using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Actions;
+using DevExpress.ExpressApp.Utils;
 using DevExpress.Persistent.Base;
 using DevExpress.Persistent.Validation;
 using System;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Ultra.Email.BusinessObjects;
+using Ultra.Email.Updaters;
 
 namespace Ultra.Email.Controllers
 {
@@ -23,6 +25,7 @@ namespace Ultra.Email.Controllers
             PopupWindowShowAction SendTestEmail = new PopupWindowShowAction(this, "SendTestEmail", PredefinedCategory.View);
             SendTestEmail.Caption = "Send Test Email";
             SendTestEmail.CustomizePopupWindowParams += SendTestEmail_CustomizePopupWindowParams;
+            SendTestEmail.ImageName = "ActionGroup_EasyTestRecorder";
             SendTestEmail.Execute += SendTestEmail_Execute;
         }
 
@@ -41,24 +44,30 @@ namespace Ultra.Email.Controllers
         {
             Validator.RuleSet.Validate(os, obj, "Save");
 
+            XafSendEmail(obj, this.Application);
+        }
+
+        public static void XafSendEmail(IBoToEmail IBoToEmail, XafApplication App)
+        {
             try
             {
-                obj.SmtpEmailAccount.SendEmail(obj.To, obj.Subject, obj.Body);
-                ShowMessage(InformationType.Success, "Success", "Success");
+                Tracing.Tracer.LogSeparator("Sending email");
+                Tracing.Tracer.LogValue("Smtp Email Account", IBoToEmail.GetEmailAccount().Name);
+                IBoToEmail.GetEmailAccount().SendEmail(IBoToEmail);
+
+                ShowMessage(App, InformationType.Success, CaptionHelper.GetLocalizedText(ModelLocalizationNodesGeneratorUpdater.ModuleName, ModelLocalizationGroupGeneratorUpdater.SuccessMessage)
+                    , CaptionHelper.GetLocalizedText(ModelLocalizationNodesGeneratorUpdater.ModuleName, ModelLocalizationGroupGeneratorUpdater.SuccessCaption));
             }
             catch (Exception exception)
             {
-                Debug.WriteLine(string.Format("{0}:{1}", "exception.Message", exception.Message));
-                if (exception.InnerException != null)
-                {
-                    Debug.WriteLine(string.Format("{0}:{1}", "exception.InnerException.Message", exception.InnerException.Message));
-                }
-                Debug.WriteLine(string.Format("{0}:{1}", " exception.StackTrace", exception.StackTrace));
-                ShowMessage(InformationType.Error, exception.Message, "Error");
+                Tracing.Tracer.LogError(exception);
+
+                ShowMessage(App, InformationType.Error, CaptionHelper.GetLocalizedText(ModelLocalizationNodesGeneratorUpdater.ModuleName, ModelLocalizationGroupGeneratorUpdater.ErrorMessage)
+                  , CaptionHelper.GetLocalizedText(ModelLocalizationNodesGeneratorUpdater.ModuleName, ModelLocalizationGroupGeneratorUpdater.SuccessCaption));
             }
         }
 
-        protected virtual void ShowMessage(InformationType Type, string Message, string Caption)
+        protected static void ShowMessage(XafApplication App, InformationType Type, string Message, string Caption)
         {
             MessageOptions options = new MessageOptions();
             options.Duration = 5000;
@@ -68,7 +77,7 @@ namespace Ultra.Email.Controllers
             options.Win.Caption = Caption;
             options.Win.Type = WinMessageType.Alert;
 
-            Application.ShowViewStrategy.ShowMessage(options);
+            App.ShowViewStrategy.ShowMessage(options);
         }
     }
 }

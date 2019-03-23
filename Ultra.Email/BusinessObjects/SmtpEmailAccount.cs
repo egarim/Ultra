@@ -14,9 +14,10 @@ using System.Net.Mail;
 using System.Net.Mime;
 using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
+using Ultra.Email;
 
 [DefaultClassOptions]
-[NavigationItem("System")]
+[NavigationItem("Email")]
 [ImageName("Actions_EnvelopeClose")]
 [DefaultProperty("Name")]
 public class SmtpEmailAccount : BaseObject
@@ -147,7 +148,6 @@ public class SmtpEmailAccount : BaseObject
         }
     }
 
-    [Obsolete("Do not use this in Production code!!!", false)]
     private static void DisableCertificateCheck()
     {
         // Disabling certificate validation can expose you to a man-in-the-middle attack
@@ -167,37 +167,23 @@ public class SmtpEmailAccount : BaseObject
     }
 
     /// <summary>
-    /// Send an email to the specified addresses
+    /// this method will send an email using the parameters from IBoToEmail
     /// </summary>
-    /// <param name="AllAddress">A list of address separated by coma</param>
-    /// <param name="Subject">The subject of the email</param>
-    /// <param name="Body">the body of the email</param>
-    public void SendEmail(string AllAddress, string Subject, string Body)
-    {
-        var Addresses = AllAddress.Split(',').ToList();
-        SendEmail(Addresses, Subject, Body, null);
-    }
-
-    /// <summary>
-    /// Send an email to the specified addresses
-    /// </summary>
-    /// <param name="AllAddress">A list of address</param>
-    /// <param name="Subject">The subject of the email</param>
-    /// <param name="Body">the body of the email</param>
-    /// <param name="Attachments">A list of tuple with 2 items first the file name, second the memory stream with the content and third the content type</param>
-    public void SendEmail(List<string> AllAddress, string Subject, string Body, List<Tuple<string, MemoryStream, ContentType>> Attachments)
+    /// <param name="Instance">An object that implements IBoToEmail</param>
+    public void SendEmail(IBoToEmail Instance)
     {
         MailMessage mail = new MailMessage();
         SmtpClient SmtpServer = new SmtpClient(this.SmtpServer);
 
         mail.From = new MailAddress(this.UserName);
 
-        var Addresses = string.Join(",", AllAddress);
-        mail.To.Add(Addresses);
+        mail.To.Add(Instance.GetTo());
+        mail.CC.Add(Instance.GetCC());
+        mail.CC.Add(Instance.GetBCC());
+        mail.Subject = Instance.GetSubject();
+        mail.Body = Instance.GetBody();
 
-        mail.Subject = Subject;
-        mail.Body = Body;
-
+        List<Tuple<string, MemoryStream, ContentType>> Attachments = Instance.GetAttachments();
         if (Attachments != null)
         {
             foreach (Tuple<string, MemoryStream, ContentType> CurrentObject in Attachments)
@@ -209,7 +195,11 @@ public class SmtpEmailAccount : BaseObject
         }
 
         SmtpServer.Port = this.SmtpPort;
-        SmtpServer.Credentials = new System.Net.NetworkCredential(this.UserName, this.Password);
+        if (this.UseUsernameAndPassword)
+        {
+            SmtpServer.Credentials = new System.Net.NetworkCredential(this.UserName, this.Password);
+        }
+
         SmtpServer.EnableSsl = this.EnableSSL;
         if (DisableSSLCertificateCheck)
             DisableCertificateCheck();

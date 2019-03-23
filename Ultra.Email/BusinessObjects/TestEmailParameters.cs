@@ -3,15 +3,20 @@ using DevExpress.Persistent.Validation;
 using DevExpress.Xpo;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net.Mime;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Ultra.Email.BusinessObjects
 {
     [NonPersistent()]
-    public class TestEmailParameters : BaseObject
+    public class TestEmailParameters : BaseObject, IBoToEmail
     {
+        private SmtpEmailAccount emailAccount;
+        private string bCC;
+        private string cC;
         private SmtpEmailAccount smtpEmailAccount;
         private string body;
         private string subject;
@@ -49,6 +54,20 @@ namespace Ultra.Email.BusinessObjects
             set => SetPropertyValue(nameof(To), ref to, value);
         }
 
+        [Size(SizeAttribute.DefaultStringMappingFieldSize)]
+        public string CC
+        {
+            get => cC;
+            set => SetPropertyValue(nameof(CC), ref cC, value);
+        }
+
+        [Size(SizeAttribute.DefaultStringMappingFieldSize)]
+        public string BCC
+        {
+            get => bCC;
+            set => SetPropertyValue(nameof(BCC), ref bCC, value);
+        }
+
         [RuleRequiredField("TestEmailParameters SmtpEmailAccount Subject",
           DefaultContexts.Save)]
         [Size(SizeAttribute.DefaultStringMappingFieldSize)]
@@ -65,6 +84,41 @@ namespace Ultra.Email.BusinessObjects
         {
             get => body;
             set => SetPropertyValue(nameof(Body), ref body, value);
+        }
+
+        public string GetSubject()
+        {
+            return this.Subject;
+        }
+
+        public string GetBody()
+        {
+            return this.Body;
+        }
+
+        public string GetTo()
+        {
+            return this.To;
+        }
+
+        public List<Tuple<string, MemoryStream, ContentType>> GetAttachments()
+        {
+            return null;
+        }
+
+        public SmtpEmailAccount GetEmailAccount()
+        {
+            return this.SmtpEmailAccount;
+        }
+
+        public string GetCC()
+        {
+            return this.CC;
+        }
+
+        public string GetBCC()
+        {
+            return this.BCC;
         }
     }
 }

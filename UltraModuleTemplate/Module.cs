@@ -16,9 +16,18 @@ using DevExpress.ExpressApp.Model.DomainLogics;
 using DevExpress.ExpressApp.Model.NodeGenerators;
 using DevExpress.ExpressApp.Xpo;
 using UltraModuleTemplate.Updaters;
+using System.Drawing;
 
 namespace UltraModuleTemplate
 {
+    //TODO uncomment the filter attribute depending on the platform implementation
+    //[ToolboxItemFilter("Xaf.Platform.Win")]
+    //[ToolboxItemFilter("Xaf.Platform.Web")]
+    [DevExpress.Utils.ToolboxTabName(XafAssemblyInfo.DXTabXafModules)]
+    //TODO module description
+    [Description("Ultra Modules for XAF: ")]
+    [ToolboxItem(true)]
+    [ToolboxBitmap(typeof(UltraModuleTemplate), "Resources.Gear.ico")]
     // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppModuleBasetopic.aspx.
     public sealed partial class UltraModuleTemplate : ModuleBase
     {

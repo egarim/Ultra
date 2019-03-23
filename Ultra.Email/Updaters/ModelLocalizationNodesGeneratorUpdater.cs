@@ -11,8 +11,7 @@ namespace Ultra.Email.Updaters
     public class ModelLocalizationNodesGeneratorUpdater :
     ModelNodesGeneratorUpdater<ModelLocalizationNodesGenerator>
     {
-        //TODO Change ModuleName Node
-        public const string ModuleName = "EmailModule";
+        public const string ModuleName = "Ultra Email Module";
 
         public override void UpdateNode(ModelNode node)
         {

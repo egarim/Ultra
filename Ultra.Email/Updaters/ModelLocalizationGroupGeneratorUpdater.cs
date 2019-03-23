@@ -11,6 +11,11 @@ namespace Ultra.Email.Updaters
     public class ModelLocalizationGroupGeneratorUpdater :
     ModelNodesGeneratorUpdater<ModelLocalizationGroupGenerator>
     {
+        public const string SuccessCaption = "Success Caption";
+        public const string ErrorCaption = "Error Caption";
+        public const string SuccessMessage = "Success Message";
+        public const string ErrorMessage = "Error Message";
+
         public static string GetMainLocalizationNode()
         {
             return ModelLocalizationNodesGeneratorUpdater.ModuleName;
@@ -43,7 +48,10 @@ namespace Ultra.Email.Updaters
         private static void CreateNodes(IModelLocalizationGroup Group)
         {
             //TODO create nodes for your text
-            //AddGroupItem(Group, "NodeName", "Text");
+            AddGroupItem(Group, SuccessCaption, "Success");
+            AddGroupItem(Group, ErrorCaption, "Error");
+            AddGroupItem(Group, SuccessMessage, "Mail successfully sent");
+            AddGroupItem(Group, ErrorMessage, "An error has occurred sending the mail");
         }
     }
 }

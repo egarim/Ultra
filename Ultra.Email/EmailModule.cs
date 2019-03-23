@@ -16,9 +16,19 @@ using DevExpress.ExpressApp.Model.DomainLogics;
 using DevExpress.ExpressApp.Model.NodeGenerators;
 using DevExpress.ExpressApp.Xpo;
 using Ultra.Email.Updaters;
+using Ultra.Email.BusinessObjects;
+using Ultra.Email.Controllers;
+using System.Drawing;
 
 namespace Ultra.Email
 {
+    [DevExpress.Utils.ToolboxTabName(XafAssemblyInfo.DXTabXafModules)]
+    //TODO uncomment the filter attribute depending on the platform implementation
+    //[ToolboxItemFilter("Xaf.Platform.Win")]
+    //[ToolboxItemFilter("Xaf.Platform.Web")]
+    [Description("Ultra Modules for XAF: Email")]
+    [ToolboxItem(true)]
+    [ToolboxBitmap(typeof(EmailModule), "Resources.Message_Mail.ico")]
     // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppModuleBasetopic.aspx.
     public sealed partial class EmailModule : ModuleBase
     {
@@ -56,23 +66,16 @@ namespace Ultra.Email
 
         protected override IEnumerable<Type> GetDeclaredExportedTypes()
         {
-            //TODO return an array of types to improve performance
-            //return new Type[] {
-            //    typeof(BIT.XAF.DataImport.BusinessObjects.ImportMap),
-
-            //};
-            return base.GetDeclaredExportedTypes();
+            return new Type[] {
+                typeof(SmtpEmailAccount),typeof(TestEmailParameters)
+            };
         }
 
         protected override IEnumerable<Type> GetDeclaredControllerTypes()
         {
-            //TODO return an array of types to improve performance
-
-            //return new Type[] {
-            //    typeof(ImportControllerExcel),typeof(DisableNestedObjectActions),
-            //    typeof(ShowDataDictionary), typeof(DataDictionaryController)
-            //};
-            return base.GetDeclaredControllerTypes();
+            return new Type[] {
+                typeof(SendEmailController),typeof(SmtpEmailAccountController),
+            };
         }
     }
 }

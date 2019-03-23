@@ -45,7 +45,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ultra.Scripting.Core.Win", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Email", "Email", "{48EDCF08-6E29-445A-B522-2F3B46317989}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ultra.Email", "Ultra.Email\Ultra.Email.csproj", "{95CDDDD3-D87E-4439-ACA9-5C62DCAA7ECE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ultra.Email", "Ultra.Email\Ultra.Email.csproj", "{95CDDDD3-D87E-4439-ACA9-5C62DCAA7ECE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
