@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net452</TargetFramework>
-    <Configurations>Debug;Release;18_2_3_1;18_2_4_1;18_2_5_1;18_2_6_1</Configurations>
+    <Configurations>Debug;Release;18_2_3_1;18_2_4_1;18_2_5_1;18_2_6_1;18_2_7_X</Configurations>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <Authors>Jose Manuel Ojeda Melgar</Authors>
     <PackageTags>JocheOjeda XAF ExpressApplicationFramework DevExpress Ultra EmailModule</PackageTags>
@@ -19,19 +19,23 @@
   <!--Nuget Generation Section-->
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_3_1|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>18.2.3.2</Version>
+    <Version>18.2.3.3</Version>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_4_1|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>18.2.4.2</Version>
+    <Version>18.2.4.3</Version>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_5_1|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>18.2.5.2</Version>
+    <Version>18.2.5.3</Version>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_6_1|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>18.2.6.2</Version>
+    <Version>18.2.6.3</Version>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_7_X|AnyCPU'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>18.2.7.3</Version>
   </PropertyGroup>
   <!--Nuget Generation Section-->
   <!--Nuget Reference Section-->
@@ -51,6 +55,9 @@
   </ItemGroup>
   <ItemGroup Condition=" '$(Configuration)' == '18_2_6_1' ">
     <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.6" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == '18_2_7_X' ">
+    <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.7" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">

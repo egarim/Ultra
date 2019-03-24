@@ -3,9 +3,9 @@
 
 Ultra is a set of open source modules to extend the capabilites of the framework [XAF from developer express](https://www.devexpress.com/products/net/application_framework/)
 
-Ultra modules for XAF project is create José Manuel Ojeda Melgar, A.K.A [Joche Ojeda](https://www.jocheojeda.com).
+Ultra modules for XAF project is created José Manuel Ojeda Melgar, A.K.A [Joche Ojeda](https://www.jocheojeda.com).
 
-Most of the ideas for these  modules came
+Most of the ideas for these modules came
 from endless conversations with technical peers, not all of them are mentioned here, but my appreciation and admiration goes for all of them:
 
 - José Javier Columbie (Cuba/U.S.A)  [Xari.io](https://www.xari.io/)
