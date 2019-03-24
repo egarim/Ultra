@@ -19,19 +19,19 @@
   <!--Nuget Generation Section-->
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_3_1|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>18.2.3.1</Version>
+    <Version>18.2.3.2</Version>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_4_1|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>18.2.4.1</Version>
+    <Version>18.2.4.2</Version>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_5_1|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>18.2.5.1</Version>
+    <Version>18.2.5.2</Version>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_6_1|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>18.2.6.1</Version>
+    <Version>18.2.6.2</Version>
   </PropertyGroup>
   <!--Nuget Generation Section-->
   <!--Nuget Reference Section-->

@@ -1,4 +1,5 @@
-﻿using DevExpress.Persistent.Base;
+﻿using DevExpress.Data.Filtering;
+using DevExpress.Persistent.Base;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Xpo;
 using System;
@@ -94,7 +95,7 @@ namespace Ultra.MainDemo.Module.BusinessObjects.EmailModule
 
         public SmtpEmailAccount GetEmailAccount()
         {
-            throw new NotImplementedException();
+            return this.Session.FindObject<SmtpEmailAccount>(new BinaryOperator("Name", "Gmail"));
         }
 
         public string GetCC()

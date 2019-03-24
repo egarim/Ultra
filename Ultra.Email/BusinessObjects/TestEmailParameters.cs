@@ -14,7 +14,6 @@ namespace Ultra.Email.BusinessObjects
     [NonPersistent()]
     public class TestEmailParameters : BaseObject, IBoToEmail
     {
-        private SmtpEmailAccount emailAccount;
         private string bCC;
         private string cC;
         private SmtpEmailAccount smtpEmailAccount;
