@@ -1,36 +1,90 @@
-﻿Project Description
-
-This project implements a platform-agnostic Module. UI-independent application 
-elements can be implemented here (Business Objects, Controllers, etc.). The root 
-project folder contains the Module.cs(vb) file with the class that inherits 
-ModuleBase. This class can be designed with the Module Designer that allows 
-you to view and customize Module components: referenced modules, Controllers 
-and business classes. Additionally, the root folder contains Application Model 
-difference files (XAFML files) that keep application settings specific for the 
-current Module. Differences files can be designed with the Model Editor.  
+﻿
+This module helps you search across all your persistent classes and present a unified search result
 
 
-Relevant Documentation
+### Setup
 
-Application Solution Components
-https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112569.aspx
+- Add to your agnostic module project the [nuget package](https://www.nuget.org/packages/Ultra.UniversalSearch/) that matches your current version of XAF
+- Add the module to the require modules (in Module.Designer.cs or Module.Designer.vb) as shown below
 
-ModuleBase Class
-https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppModuleBasetopic.aspx
+### C#
+```
+private void InitializeComponent()
+{		
+	this.RequiredModuleTypes.Add(typeof(Ultra.UniversalSearch.UniversalSearchModule));
+}
+```
+### Vb.Net
+```
+Private Sub InitializeComponent()
+	Me.RequiredModuleTypes.Add(GetType(Ultra.UniversalSearch.UniversalSearchModule))
+End Sub
+```
 
-Module Designer
-https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112828.aspx
+### Usage
+### C#
+```
+[UniversalSearchAttribute("Code;Name", "Country Code:{0} - Country Name:{1}")]
+public class Customer:BaseObject
+{
+	public string Name { get; set; }
+	public int CustomerID { get; set; }
+	public bool Active { get; set; }
+}
+```
+### Vb.Net
+```
+<UniversalSearchAttribute("Code;Name", "Country Code:{0} - Country Name:{1}")>
+Public Class Customer
+	Inherits BaseObject
 
-Application Model
-https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112579.aspx
+	Public Property Name As String
+	Public Property CustomerID As Integer
+	Public Property Active As Boolean
+End Class
+```
 
-Model Editor
-https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112582.aspx
+### Demo
+![Ultra Universal Search](UltraUniversalSearch.gif)
 
 
-eXpand Framework - http://www.expandframework.com
 
-This is an open source toolkit built above the eXpressApp Framework extending its capabilities
-and providing 50+ cutting-edge libraries containing tools and reusable modules to target numerous 
-business scenarios. The main idea behind eXpand is to offer as many features as possible to 
-developers/business users through a declarative approach (configuring files rather than writing code).
+### Note
+
+As we can see in the UniversalSearchAttribute definition bellow the DisplayProperties, and DisplayPropertiesStringFormat parameters are just for presentation purposes once the search has successfully found results. The actual search function will iterate over every property of your class and match your search term accordingly.
+
+```
+public UniversalSearchAttribute(string DisplayProperties, string DisplayPropertiesStringFormat)
+		{
+			Guard.ArgumentNotNullOrEmpty(DisplayProperties, "DisplayProperties");
+			Guard.ArgumentNotNullOrEmpty(DisplayPropertiesStringFormat, "DisplayPropertiesStringFormat");
+			this.DisplayProperties = DisplayProperties;
+			this.DisplayPropertiesStringFormat = DisplayPropertiesStringFormat;
+		}
+```
+
+If you want to explore more take a peek at the method ICollection<String> GetFullTextSearchProperties(ITypeInfo TypeInfo) where all the magic happens.
+
+### Tip 
+
+When using composition in your DisplayProperties make sure to also include the property or field you want to actually be displayed. This will avoid showing in your search results an ugly looking Oid string.  Example: Customer.Name instead of Customer will suffice.
+
+```
+[UniversalSearchAttribute("InvoiceNumber;Customer.Name", "Invoice Number:{0} - Customer:{1}")]
+    public class Invoice : BaseObject
+    {  
+        
+        public Customer Customer
+        {
+            get => customer;
+            set => SetPropertyValue(nameof(Customer), ref customer, value);
+        }
+        
+        public string InvoiceNumber
+        {
+            get => invoiceNumber;
+            set => SetPropertyValue(nameof(InvoiceNumber), ref invoiceNumber, value);
+        }
+    }
+
+```

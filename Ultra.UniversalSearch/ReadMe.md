@@ -4,7 +4,7 @@ This module helps you search across all your persistent classes and present a un
 
 ### Setup
 
-- Add to your agnostic module project the nuget package that matches your current version of XAF
+- Add to your agnostic module project the [nuget package](https://www.nuget.org/packages/Ultra.UniversalSearch/) that matches your current version of XAF
 - Add the module to the require modules (in Module.Designer.cs or Module.Designer.vb) as shown below
 
 ### C#

@@ -48,7 +48,8 @@ By [becoming a Patron](https://www.patreon.com/jocheojeda), you will receive sev
 
 | Module        | Description   |
 | ------------- |:-------------:| 
-|[Universal Search](https://github.com/egarim/Ultra/tree/master/Ultra.UniversalSearch)      | this module gives you the ability to search all your persistent objects in a unified user interface | 
+|[Universal Search](https://github.com/egarim/Ultra/tree/master/Ultra.UniversalSearch)      | this module gives you the ability to search all your persistent objects in a unified user interface |
+|[Email](https://github.com/egarim/Ultra/tree/master/Ultra.Email)      | To locate the log of the email module search for the entry "Sending email", below this entry you will find the parameters used to send the email and any exception information if an exception happened |  
  
 
 
