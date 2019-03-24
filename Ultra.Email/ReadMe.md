@@ -120,4 +120,19 @@ If you want to use the SMTP email accounts from code, there are 2 ways of doing 
 
 ### Debuging the connection to the SMPT server
 
+Sometimes there are problems connecting to the SMTP server, to debug the connection you should enable error logging in XAF app or web config as shown below
 
+
+```xml
+  <system.diagnostics>
+    <switches>
+      <!-- Use the one of predefined values: 0-Off, 1-Errors, 2-Warnings, 3-Info, 4-Verbose. The default value is 3. -->
+      <add name="eXpressAppFramework" value="3"/>
+      <!--
+      <add name="XPO" value="3" />
+      -->
+    </switches>
+  </system.diagnostics>
+```
+
+To locate the log of the email module search for the entry "Sending email", below this entry you will find the parameters used to send the email and any exception information if an exception happened

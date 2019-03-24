@@ -57,7 +57,15 @@ namespace Ultra.Email.Controllers
             try
             {
                 Tracing.Tracer.LogSeparator("Sending email");
-                Tracing.Tracer.LogValue("Smtp Email Account", IBoToEmail.GetEmailAccount().Name);
+                Tracing.Tracer.LogValue("Name", IBoToEmail.GetEmailAccount().Name);
+                Tracing.Tracer.LogValue("Description", IBoToEmail.GetEmailAccount().Description);
+                Tracing.Tracer.LogValue("DisableSSLCertificateCheck", IBoToEmail.GetEmailAccount().DisableSSLCertificateCheck);
+                Tracing.Tracer.LogValue("EnableSSL", IBoToEmail.GetEmailAccount().EnableSSL);
+                Tracing.Tracer.LogValue("SmtpPort", IBoToEmail.GetEmailAccount().SmtpPort);
+                Tracing.Tracer.LogValue("SmtpServer", IBoToEmail.GetEmailAccount().SmtpServer);
+                Tracing.Tracer.LogValue("UserName", IBoToEmail.GetEmailAccount().UserName);
+                Tracing.Tracer.LogValue("UseUsernameAndPassword", IBoToEmail.GetEmailAccount().UseUsernameAndPassword);
+
                 IBoToEmail.GetEmailAccount().SendEmail(IBoToEmail);
 
                 if (App != null)
@@ -65,6 +73,7 @@ namespace Ultra.Email.Controllers
                     ShowMessage(App, InformationType.Success, CaptionHelper.GetLocalizedText(ModelLocalizationNodesGeneratorUpdater.ModuleName, ModelLocalizationGroupGeneratorUpdater.SuccessMessage)
                 , CaptionHelper.GetLocalizedText(ModelLocalizationNodesGeneratorUpdater.ModuleName, ModelLocalizationGroupGeneratorUpdater.SuccessCaption));
                 }
+                Tracing.Tracer.LogSeparator("Email sent");
             }
             catch (Exception exception)
             {
