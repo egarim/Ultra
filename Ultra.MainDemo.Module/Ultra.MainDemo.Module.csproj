@@ -53,6 +53,7 @@
     <ProjectReference Include="..\Ultra.UniversalSearch\Ultra.UniversalSearch.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Controllers\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>

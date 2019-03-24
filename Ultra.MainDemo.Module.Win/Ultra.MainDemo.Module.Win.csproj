@@ -48,6 +48,8 @@
     <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.6" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="BusinessObjects\" />
+    <Folder Include="Controllers\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
