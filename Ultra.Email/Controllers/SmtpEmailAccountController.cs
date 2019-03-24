@@ -47,6 +47,11 @@ namespace Ultra.Email.Controllers
             XafSendEmail(obj, this.Application);
         }
 
+        public static void SendEmailSilently(IBoToEmail IBoToEmail)
+        {
+            XafSendEmail(IBoToEmail, null);
+        }
+
         public static void XafSendEmail(IBoToEmail IBoToEmail, XafApplication App)
         {
             try
@@ -55,15 +60,20 @@ namespace Ultra.Email.Controllers
                 Tracing.Tracer.LogValue("Smtp Email Account", IBoToEmail.GetEmailAccount().Name);
                 IBoToEmail.GetEmailAccount().SendEmail(IBoToEmail);
 
-                ShowMessage(App, InformationType.Success, CaptionHelper.GetLocalizedText(ModelLocalizationNodesGeneratorUpdater.ModuleName, ModelLocalizationGroupGeneratorUpdater.SuccessMessage)
-                    , CaptionHelper.GetLocalizedText(ModelLocalizationNodesGeneratorUpdater.ModuleName, ModelLocalizationGroupGeneratorUpdater.SuccessCaption));
+                if (App != null)
+                {
+                    ShowMessage(App, InformationType.Success, CaptionHelper.GetLocalizedText(ModelLocalizationNodesGeneratorUpdater.ModuleName, ModelLocalizationGroupGeneratorUpdater.SuccessMessage)
+                , CaptionHelper.GetLocalizedText(ModelLocalizationNodesGeneratorUpdater.ModuleName, ModelLocalizationGroupGeneratorUpdater.SuccessCaption));
+                }
             }
             catch (Exception exception)
             {
                 Tracing.Tracer.LogError(exception);
-
-                ShowMessage(App, InformationType.Error, CaptionHelper.GetLocalizedText(ModelLocalizationNodesGeneratorUpdater.ModuleName, ModelLocalizationGroupGeneratorUpdater.ErrorMessage)
+                if (App != null)
+                {
+                    ShowMessage(App, InformationType.Error, CaptionHelper.GetLocalizedText(ModelLocalizationNodesGeneratorUpdater.ModuleName, ModelLocalizationGroupGeneratorUpdater.ErrorMessage)
                   , CaptionHelper.GetLocalizedText(ModelLocalizationNodesGeneratorUpdater.ModuleName, ModelLocalizationGroupGeneratorUpdater.SuccessCaption));
+                }
             }
         }
 
