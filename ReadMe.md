@@ -3,20 +3,20 @@
 
 Ultra is a set of open source modules to extend the capabilites of the framework [XAF from developer express](https://www.devexpress.com/products/net/application_framework/)
 
-Ultra modules for XAF project is created JosÈ Manuel Ojeda Melgar, A.K.A [Joche Ojeda](https://www.jocheojeda.com).
+Ultra modules for XAF project is created Jos√© Manuel Ojeda Melgar, A.K.A [Joche Ojeda](https://www.jocheojeda.com).
 
 Most of the ideas for these modules came
 from endless conversations with technical peers, not all of them are mentioned here, but my appreciation and admiration goes for all of them:
 
-- JosÈ Javier Columbie (Cuba/U.S.A)  [Xari.io](https://www.xari.io/)
+- Jos√© Javier Columbie (Cuba/U.S.A) 
 - Douglas Coto Lara (El Salvador)    Source Code
 - Walter Omar Gavarrete (El Salvador)  [itwgsv](http://www.itwgsv.com)
-- Pedro Hern·ndez (Republica Dominicana) [People Works Services](http://www.peopleworksservices)
+- Pedro Hern√°ndez (Republica Dominicana) [People Works Services](http://www.peopleworksservices)
 - Claudio Menetti (Italy) [informind.it](http://www.informind)
 
 All Ultra modules are released under [Microsoft Public License (Ms-PL)](https://opensource.org/licenses/MS-PL)
 
-The philosphy of ultra modules is that a module should be easy obtain, install and setup so we have chosen nuget packages as our distribution method
+The philosophy of ultra modules is that a module should be easy obtain, install and setup so we have chosen nuget packages as our distribution method
 
 ### Help Support Ultra
 ---
