@@ -53,6 +53,18 @@ By [becoming a Patron](https://www.patreon.com/jocheojeda), you will receive sev
  
 
 
+### Nuget Version Numbers
+
+
+Each nuget package has a version number as part of its identity. As such, two nugets that differ by version number are considered by the runtime to be completely different nuget packages. This version number is physically represented as a four-part string with the following format:
+
+```<language>
+<major version>.<minor version>.<build number>.<module version>
+```
+
+For example, version 18.2.4.1 indicates 18 as the major version, 2 as the minor version, 4 as the build number, and 1 as the version number of the ultra module.The first 3 numbers
+represent the version of DevExpress nuget.
+
 
 ### Help us get better?
 
