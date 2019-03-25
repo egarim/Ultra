@@ -8,7 +8,7 @@ Ultra modules for XAF project is created José Manuel Ojeda Melgar, A.K.A [Joche
 Most of the ideas for these modules came
 from endless conversations with technical peers, not all of them are mentioned here, but my appreciation and admiration goes for all of them:
 
-- José Javier Columbie (Cuba/U.S.A) 
+- José Javier Columbie (Cuba/U.S.A) [Xafmarin](https://xafmarin.com/)
 - Douglas Coto Lara (El Salvador)    Source Code
 - Walter Omar Gavarrete (El Salvador)  [itwgsv](http://www.itwgsv.com)
 - Pedro Hernández (Republica Dominicana) [People Works Services](http://www.peopleworksservices)
