@@ -60,8 +60,8 @@ namespace Ultra.Scripting.Core.Win
             control = new DevExpress.XtraRichEdit.RichEditControl();
             Script CurrentObject = (Script)this.CurrentObject;
             this.CurrentObjectChanged += CodeEditor_CurrentObjectChanged;
-            CurrentObject.Changed += CurrentObject_Changed;
-            _SyntaxHigLighter = new MySyntaxHighlightService(control, (Script)this.CurrentObject);
+            //CurrentObject.Changed += CurrentObject_Changed;
+            _SyntaxHigLighter = new MySyntaxHighlightService(control, CurrentObject);
             control.ReplaceService<ISyntaxHighlightService>(_SyntaxHigLighter);
             control.ActiveViewType = DevExpress.XtraRichEdit.RichEditViewType.Simple;
             control.Dock = DockStyle.Fill;

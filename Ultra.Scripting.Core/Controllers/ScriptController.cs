@@ -123,7 +123,7 @@ namespace Ultra.Scripting.Core.Controllers
             app.ShowViewStrategy.ShowView(svp, new ShowViewSource(null, null));
         }
 
-        private static void CompilationReult(Script CurrentCode, EmitResult result)
+        private static void CompilationResult(Script CurrentCode, EmitResult result)
         {
             IEnumerable<Diagnostic> failures = result.Diagnostics.Where(diagnostic =>
                                     diagnostic.IsWarningAsError ||
@@ -206,7 +206,7 @@ namespace Ultra.Scripting.Core.Controllers
 
                 if (!result.Success)
                 {
-                    CompilationReult(CurrentCode, result);
+                    CompilationResult(CurrentCode, result);
                     MessageOptions options = new MessageOptions();
                     options.Duration = 5000;
                     options.Message = string.Format("There are compilation errors, please check the compilation result");
@@ -347,7 +347,7 @@ namespace Ultra.Scripting.Core.Controllers
 
                 if (!result.Success)
                 {
-                    CompilationReult(CurrentCode, result);
+                    CompilationResult(CurrentCode, result);
                 }
                 else
                 {

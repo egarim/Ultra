@@ -59,13 +59,14 @@ namespace Ultra.Scripting.Core
             //TODO return an array of types to improve performance
             return new Type[] {
                 typeof(BusinessObjects.Script),typeof(BusinessObjects.ScriptAssemblyReference),typeof(BusinessObjects.ScriptTemplate)
+                ,typeof(BusinessObjects.ViewScript)
             };
         }
 
         protected override IEnumerable<Type> GetDeclaredControllerTypes()
         {
             return new Type[] {
-                typeof(Scripting.Core.Controllers.ScriptController)
+                typeof(Scripting.Core.Controllers.ScriptController),typeof(Scripting.Core.Controllers.ScriptHookController)
             };
         }
     }
