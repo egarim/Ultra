@@ -81,7 +81,7 @@ namespace Ultra.Email.Controllers
                 if (App != null)
                 {
                     ShowMessage(App, InformationType.Error, CaptionHelper.GetLocalizedText(ModelLocalizationNodesGeneratorUpdater.ModuleName, ModelLocalizationGroupGeneratorUpdater.ErrorMessage)
-                  , CaptionHelper.GetLocalizedText(ModelLocalizationNodesGeneratorUpdater.ModuleName, ModelLocalizationGroupGeneratorUpdater.SuccessCaption));
+                  , CaptionHelper.GetLocalizedText(ModelLocalizationNodesGeneratorUpdater.ModuleName, ModelLocalizationGroupGeneratorUpdater.ErrorCaption));
                 }
             }
         }
