@@ -75,6 +75,11 @@ There are several ways in which you can contribute. Here are some:
 - Invite others to share this project and continue to spread the word.
 - Of course you are more than welcome to submit other features and bugfixes as well.
 
+### Powered by
+
+![Xari](Xari.png )  
+[https://www.xari.io](https://www.xari.io)
+
 
 
 
