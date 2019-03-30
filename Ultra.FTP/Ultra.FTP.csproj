@@ -1,21 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net452</TargetFramework>
-    <Configurations>Debug;Release;18_2_3_1;18_2_4_1;18_2_5_1;18_2_6_1;18_2_7_X</Configurations>
+    <Configurations>Debug;Release;18_2_3_1;18_2_4_1;18_2_5_1;18_2_6_1</Configurations>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-    <Title>Universal search module for XAF</Title>
     <Authors>Jose Manuel Ojeda Melgar</Authors>
-    <PackageTags>Joche Ojeda, XAF, Express Application Framework,DevExpress,Ultra,Universal Search, XAF Ultra Modules</PackageTags>
+    <PackageTags>JocheOjeda XAF ExpressApplicationFramework DevExpress Ultra </PackageTags>
     <Company>BIT Frameworks</Company>
-    <Description>This module helps you search across all your persistent classes and present a unified search result</Description>
+    <Description>Module description</Description>
     <DebugType>full</DebugType>
-    <PackageProjectUrl>https://github.com/egarim/Ultra/tree/master/Ultra.UniversalSearch</PackageProjectUrl>
+    <PackageProjectUrl>URL</PackageProjectUrl>
     <DebugSymbols>true</DebugSymbols>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)" />
+    <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
   </ItemGroup>
   <!--Nuget Generation Section-->
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_3_1|AnyCPU'">
@@ -33,10 +32,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_6_1|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>18.2.6.1</Version>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_7_X|AnyCPU'">
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>18.2.7.1</Version>
   </PropertyGroup>
   <!--Nuget Generation Section-->
   <!--Nuget Reference Section-->
@@ -57,24 +52,11 @@
   <ItemGroup Condition=" '$(Configuration)' == '18_2_6_1' ">
     <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.6" />
   </ItemGroup>
-  <ItemGroup Condition=" '$(Configuration)' == '18_2_7_X' ">
-    <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.7" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Update="Properties\Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
   <!--Nuget Reference Section-->
   <Target Name="CopyPackage" AfterTargets="Pack">
     <Copy SourceFiles="bin\$(ConfigurationName)\$(PackageId).$(PackageVersion).nupkg" DestinationFolder="$(USERPROFILE)\Documents\MyNugets\" />
   </Target>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
 </Project>

@@ -19,29 +19,32 @@
   <!--Nuget Generation Section-->
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_3_1|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>18.2.3.3</Version>
+    <Version>18.2.3.4</Version>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_4_1|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>18.2.4.3</Version>
+    <Version>18.2.4.4</Version>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_5_1|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>18.2.5.3</Version>
+    <Version>18.2.5.4</Version>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_6_1|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>18.2.6.3</Version>
+    <Version>18.2.6.4</Version>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_7_X|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>18.2.7.3</Version>
+    <Version>18.2.7.4</Version>
   </PropertyGroup>
   <!--Nuget Generation Section-->
   <!--Nuget Reference Section-->
   <!--Debug Build Reference-->
   <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
     <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.6" />
+    <ProjectReference Include="..\Ultra.SharedCode\Ultra.SharedCode.csproj">
+      <Private>true</Private>
+    </ProjectReference>
   </ItemGroup>
   <!--Debug Build Reference-->
   <ItemGroup Condition=" '$(Configuration)' == '18_2_3_1' ">
@@ -59,6 +62,7 @@
   <ItemGroup Condition=" '$(Configuration)' == '18_2_7_X' ">
     <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.7" />
   </ItemGroup>
+
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -74,6 +78,6 @@
   </ItemGroup>
   <!--Nuget Reference Section-->
   <Target Name="CopyPackage" AfterTargets="Pack">
-    <Copy SourceFiles="bin\$(ConfigurationName)\$(PackageId).$(PackageVersion).nupkg" DestinationFolder="C:\Users\Joche\Documents\MyNugets\" />
+    <Copy SourceFiles="bin\$(ConfigurationName)\$(PackageId).$(PackageVersion).nupkg" DestinationFolder="$(USERPROFILE)\Documents\MyNugets\" />
   </Target>
 </Project>

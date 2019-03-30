@@ -54,7 +54,7 @@
   </ItemGroup>
   <!--Nuget Reference Section-->
   <Target Name="CopyPackage" AfterTargets="Pack">
-    <Copy SourceFiles="bin\$(ConfigurationName)\$(PackageId).$(PackageVersion).nupkg" DestinationFolder="C:\Users\Joche\Documents\MyNugets\" />
+    <Copy SourceFiles="bin\$(ConfigurationName)\$(PackageId).$(PackageVersion).nupkg" DestinationFolder="$(USERPROFILE)\Documents\MyNugets\" />
   </Target>
   <ItemGroup>
     <Folder Include="Properties\" />

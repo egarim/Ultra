@@ -3,6 +3,7 @@
     <TargetFramework>net452</TargetFramework>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <Configurations>Debug;Release;18_2_3_1;18_2_4_1;18_2_5_1;18_2_6;18_2_6_1</Configurations>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="DevExpress.ExpressApp.Security.Xpo" Version="18.2.6" />
@@ -10,6 +11,7 @@
     <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="18.2.6" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Imp\" />
     <Folder Include="Properties\" />
   </ItemGroup>
 </Project>

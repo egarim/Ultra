@@ -140,12 +140,22 @@ public class SmtpEmailAccount : BaseObject
     {
         get
         {
-            return password;
+            return GetPasswordField();
         }
         set
         {
-            SetPropertyValue("Password", ref password, value);
+            SetPasswordField(value);
         }
+    }
+
+    protected virtual void SetPasswordField(string value)
+    {
+        SetPropertyValue(nameof(Password), ref password, value);
+    }
+
+    protected virtual string GetPasswordField()
+    {
+        return password;
     }
 
     private static void DisableCertificateCheck()

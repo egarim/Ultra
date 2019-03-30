@@ -32,6 +32,7 @@
             // UltraModuleTemplateModule
             // 
             this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.SystemModule.SystemModule));
+           
         }
 
         #endregion

@@ -22,15 +22,18 @@ namespace Ultra.Email.Controllers
         public SmtpEmailAccountController()
         {
             this.TargetObjectType = typeof(SmtpEmailAccount);
-            PopupWindowShowAction SendTestEmail = new PopupWindowShowAction(this, "SendTestEmail", PredefinedCategory.View);
-            SendTestEmail.Caption = "Send Test Email";
-            SendTestEmail.CustomizePopupWindowParams += SendTestEmail_CustomizePopupWindowParams;
-            SendTestEmail.ImageName = "ActionGroup_EasyTestRecorder";
-            SendTestEmail.Execute += SendTestEmail_Execute;
+            sendTestEmail = new PopupWindowShowAction(this, "SendTestEmail", PredefinedCategory.View);
+            sendTestEmail.Caption = "Send Test Email";
+            sendTestEmail.CustomizePopupWindowParams += SendTestEmail_CustomizePopupWindowParams;
+            sendTestEmail.ImageName = "Glyph_Mail";
+            sendTestEmail.Execute += SendTestEmail_Execute;
         }
 
         private IObjectSpace os;
+        private PopupWindowShowAction sendTestEmail;
         private TestEmailParameters obj;
+
+        public PopupWindowShowAction SendTestEmail { get => sendTestEmail; set => sendTestEmail = value; }
 
         protected virtual void SendTestEmail_CustomizePopupWindowParams(object sender, CustomizePopupWindowParamsEventArgs e)
         {
