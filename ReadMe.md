@@ -1,7 +1,7 @@
 ### Ultra Modules for XAF
 ---
 
-Ultra is a set of open source modules to extend the capabilites of the framework [XAF from developer express](https://www.devexpress.com/products/net/application_framework/)
+Ultra is a set of open source modules to extend the capabilites of the .NET application framework [DevExpress XAF](https://www.devexpress.com/products/net/application_framework/)
 
 Ultra modules for XAF project is created José Manuel Ojeda Melgar, A.K.A [Joche Ojeda](https://www.jocheojeda.com).
 
@@ -74,6 +74,11 @@ There are several ways in which you can contribute. Here are some:
 - Share this repository with everyone who uses XAF (people, teams, communities, companies or any other entity).
 - Invite others to share this project and continue to spread the word.
 - Of course you are more than welcome to submit other features and bugfixes as well.
+
+### Powered by
+
+![Xari](Xari.png )  
+[https://www.xari.io](https://www.xari.io)
 
 
 
