@@ -18,7 +18,7 @@ using System.Diagnostics;
 using System.Linq;
 using Ultra.UniversalSearch;
 
-namespace Template.Module.Controllers
+namespace Ultra.UniversalSearch.Controllers
 {
     // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppViewControllertopic.aspx.
     public class UniversalSearchController : ViewController<ListView>
@@ -29,8 +29,8 @@ namespace Template.Module.Controllers
             OpenDetailViewAction.Caption = "ShowDetailView";
             OpenDetailViewAction.Execute += ShowDetailView_Execute;
             // Target required Views (via the TargetXXX properties) and create their Actions.
-            parametrizedAction = new ParametrizedAction(this, "Universal Search", DevExpress.Persistent.Base.PredefinedCategory.View, typeof(string));
-            parametrizedAction.Execute += Search_Execute;
+            SearchAction = new ParametrizedAction(this, "Universal Search", DevExpress.Persistent.Base.PredefinedCategory.View, typeof(string));
+            SearchAction.Execute += Search_Execute;
             this.TargetObjectType = typeof(UniversalSearchResult);
             FullTextSearchTargetPropertiesMode = FullTextSearchTargetPropertiesMode.AllSearchableMembers;
         }
@@ -42,6 +42,7 @@ namespace Template.Module.Controllers
         }
 
         public SimpleAction OpenDetailViewAction { get => _OpenDetailViewAction; set => _OpenDetailViewAction = value; }
+        public ParametrizedAction SearchAction { get => parametrizedAction; set => parametrizedAction = value; }
 
         protected virtual String GetBindingPropertyName(IModelColumn modelColumn)
         {

@@ -1,6 +1,6 @@
 ﻿namespace Ultra.MainDemo.Module
 {
-    partial class UltraModuleTemplateModule
+    partial class MainDemoModule
     {
         /// <summary> 
         /// Required designer variable.

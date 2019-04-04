@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using Ultra.UniversalSearch.Controllers;
 using System.Linq;
 using DevExpress.ExpressApp;
 using System.ComponentModel;
@@ -16,7 +17,6 @@ using DevExpress.ExpressApp.Model.DomainLogics;
 using DevExpress.ExpressApp.Model.NodeGenerators;
 using DevExpress.ExpressApp.Xpo;
 using Ultra.UniversalSearch.Updaters;
-using Template.Module.Controllers;
 using System.Drawing;
 
 namespace Ultra.UniversalSearch

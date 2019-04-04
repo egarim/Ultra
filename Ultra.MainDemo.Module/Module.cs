@@ -20,9 +20,9 @@ using Ultra.MainDemo.Module.Updaters;
 namespace Ultra.MainDemo.Module
 {
     // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppModuleBasetopic.aspx.
-    public sealed partial class UltraModuleTemplateModule : ModuleBase
+    public sealed partial class MainDemoModule : ModuleBase
     {
-        public UltraModuleTemplateModule()
+        public MainDemoModule()
         {
             InitializeComponent();
             BaseObject.OidInitializationMode = OidInitializationMode.AfterConstruction;

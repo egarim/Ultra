@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+
+
+  <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.6" />
+  </ItemGroup>
+  
+  <ItemGroup>
+  
+    <PackageReference Include="DevExpress.ExpressApp.Win" Version="18.2.6" />
+    <PackageReference Include="DevExpress.ExpressApp.Web" Version="18.2.6" />
+    <PackageReference Include="NUnit" Version="3.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ultra.MainDemo.Module\Ultra.MainDemo.Module.csproj" />
+    <ProjectReference Include="..\Ultra.UniversalSearch\Ultra.UniversalSearch.csproj" />
+  </ItemGroup>
+
+</Project>

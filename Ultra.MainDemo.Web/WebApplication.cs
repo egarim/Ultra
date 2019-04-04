@@ -14,7 +14,7 @@ namespace Ultra.MainDemo.Web
     {
         private DevExpress.ExpressApp.SystemModule.SystemModule module1;
         private DevExpress.ExpressApp.Web.SystemModule.SystemAspNetModule module2;
-        private Ultra.MainDemo.Module.UltraModuleTemplateModule module3;
+        private Ultra.MainDemo.Module.MainDemoModule module3;
         private Ultra.MainDemo.Module.Web.UltraModuleTemplateModule module4;
         private DevExpress.ExpressApp.Security.SecurityModule securityModule1;
         private DevExpress.ExpressApp.Security.SecurityStrategyComplex securityStrategyComplex1;
@@ -106,7 +106,7 @@ namespace Ultra.MainDemo.Web
         {
             this.module1 = new DevExpress.ExpressApp.SystemModule.SystemModule();
             this.module2 = new DevExpress.ExpressApp.Web.SystemModule.SystemAspNetModule();
-            this.module3 = new Ultra.MainDemo.Module.UltraModuleTemplateModule();
+            this.module3 = new Ultra.MainDemo.Module.MainDemoModule();
             this.module4 = new Ultra.MainDemo.Module.Web.UltraModuleTemplateModule();
             this.securityModule1 = new DevExpress.ExpressApp.Security.SecurityModule();
             this.securityStrategyComplex1 = new DevExpress.ExpressApp.Security.SecurityStrategyComplex();
