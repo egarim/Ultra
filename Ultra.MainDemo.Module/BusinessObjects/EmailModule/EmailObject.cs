@@ -32,6 +32,7 @@ namespace Ultra.MainDemo.Module.BusinessObjects.EmailModule
         {
         }
 
+        private string from;
         private string bCC;
         private string cC;
         private string to;
@@ -73,6 +74,13 @@ namespace Ultra.MainDemo.Module.BusinessObjects.EmailModule
             set => SetPropertyValue(nameof(BCC), ref bCC, value);
         }
 
+        [Size(SizeAttribute.DefaultStringMappingFieldSize)]
+        public string From
+        {
+            get => from;
+            set => SetPropertyValue(nameof(From), ref from, value);
+        }
+
         public string GetSubject()
         {
             return this.Subject;
@@ -106,6 +114,11 @@ namespace Ultra.MainDemo.Module.BusinessObjects.EmailModule
         public string GetBCC()
         {
             return this.BCC;
+        }
+
+        public string GetFrom()
+        {
+            return this.From;
         }
     }
 }

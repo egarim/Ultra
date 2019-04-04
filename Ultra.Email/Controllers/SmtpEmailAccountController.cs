@@ -29,6 +29,7 @@ namespace Ultra.Email.Controllers
             sendTestEmail.Execute += SendTestEmail_Execute;
         }
 
+        private static Exception lastException;
         private IObjectSpace os;
         private PopupWindowShowAction sendTestEmail;
         private TestEmailParameters obj;
@@ -55,10 +56,20 @@ namespace Ultra.Email.Controllers
             XafSendEmail(IBoToEmail, null);
         }
 
+        public static Exception LastException
+        {
+            get { return lastException; }
+            private set
+            {
+                lastException = value;
+            }
+        }
+
         public static void XafSendEmail(IBoToEmail IBoToEmail, XafApplication App)
         {
             try
             {
+                LastException = null;
                 Tracing.Tracer.LogSeparator("Sending email");
                 Tracing.Tracer.LogValue("Name", IBoToEmail.GetEmailAccount().Name);
                 Tracing.Tracer.LogValue("Description", IBoToEmail.GetEmailAccount().Description);
@@ -68,6 +79,7 @@ namespace Ultra.Email.Controllers
                 Tracing.Tracer.LogValue("SmtpServer", IBoToEmail.GetEmailAccount().SmtpServer);
                 Tracing.Tracer.LogValue("UserName", IBoToEmail.GetEmailAccount().UserName);
                 Tracing.Tracer.LogValue("UseUsernameAndPassword", IBoToEmail.GetEmailAccount().UseUsernameAndPassword);
+                Tracing.Tracer.LogValue("From", IBoToEmail.GetFrom());
 
                 IBoToEmail.GetEmailAccount().SendEmail(IBoToEmail);
 
@@ -80,6 +92,7 @@ namespace Ultra.Email.Controllers
             }
             catch (Exception exception)
             {
+                LastException = exception;
                 Tracing.Tracer.LogError(exception);
                 if (App != null)
                 {

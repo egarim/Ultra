@@ -8,7 +8,7 @@ using System;
 
 namespace TestAllModules.Applications
 {
-    internal class TestApplicationWin : WinApplication
+    public class TestApplicationWin : WinApplication
     {
         protected override LayoutManager CreateLayoutManagerCore(bool simple)
         {

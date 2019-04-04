@@ -11,7 +11,7 @@ using System;
 
 namespace TestAllModules.Applications
 {
-    internal class TestApplicationAsp : WebApplication
+    public class TestApplicationAsp : WebApplication
     {
         protected override LayoutManager CreateLayoutManagerCore(bool simple)
         {

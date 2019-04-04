@@ -14,6 +14,7 @@ namespace Ultra.Email.BusinessObjects
     [NonPersistent()]
     public class TestEmailParameters : BaseObject, IBoToEmail
     {
+        private string from;
         private string bCC;
         private string cC;
         private SmtpEmailAccount smtpEmailAccount;
@@ -85,6 +86,15 @@ namespace Ultra.Email.BusinessObjects
             set => SetPropertyValue(nameof(Body), ref body, value);
         }
 
+        [RuleRequiredField("TestEmailParameters SmtpEmailAccount From",
+        DefaultContexts.Save)]
+        [Size(SizeAttribute.DefaultStringMappingFieldSize)]
+        public string From
+        {
+            get => from;
+            set => SetPropertyValue(nameof(From), ref from, value);
+        }
+
         public string GetSubject()
         {
             return this.Subject;
@@ -118,6 +128,11 @@ namespace Ultra.Email.BusinessObjects
         public string GetBCC()
         {
             return this.BCC;
+        }
+
+        public string GetFrom()
+        {
+            return this.From;
         }
     }
 }

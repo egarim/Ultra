@@ -13,6 +13,7 @@
   
     <PackageReference Include="DevExpress.ExpressApp.Win" Version="18.2.6" />
     <PackageReference Include="DevExpress.ExpressApp.Web" Version="18.2.6" />
+    <PackageReference Include="netDumbster" Version="2.0.0.4" />
     <PackageReference Include="NUnit" Version="3.11.0" />
   </ItemGroup>
 

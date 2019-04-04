@@ -14,36 +14,21 @@ using TestAllModules.Applications;
 namespace TestAllModules.Modules.UniversalSearch
 {
     [TestFixture]
-    public class UniversalSearchControllerUnitTest
+    public class UniversalSearchControllerTest : TestBase
     {
         private const string XValue = "x";
         private const string StringEmpty = "";
         private const object NullValue = null;
-        private TestApplicationWin WinApp;
-        private TestApplicationAsp AspApp;
+
         private UniversalSearchController WinController;
         private UniversalSearchController AspController;
 
         [SetUp]
         public void SetUp()
         {
-            SetupWinApp();
-            SetupWebApp();
+            BaseSetup();
             WinController = SetupWinController();
             AspController = SetupAspController();
-        }
-
-        private void SetupWebApp()
-        {
-            AspApp = new TestApplicationAsp();
-
-            MainDemoModule MainDemoModule = new MainDemoModule();
-            MainDemoModule.AdditionalExportedTypes.Add((typeof(PermissionPolicyUser)));
-            MainDemoModule.Setup(WinApp);
-            AspApp.Modules.Add(MainDemoModule);
-            AspApp.Modules.Add(new SystemAspNetModule());
-
-            AspApp.Setup();
         }
 
         private UniversalSearchController SetupAspController()
@@ -64,19 +49,6 @@ namespace TestAllModules.Modules.UniversalSearch
             frame.SetView(UniversalSearchResultListView);
             frame.RegisterController(controller);
             return controller;
-        }
-
-        private void SetupWinApp()
-        {
-            WinApp = new TestApplicationWin();
-
-            MainDemoModule MainDemoModule = new MainDemoModule();
-            MainDemoModule.AdditionalExportedTypes.Add((typeof(PermissionPolicyUser)));
-            MainDemoModule.Setup(WinApp);
-            WinApp.Modules.Add(MainDemoModule);
-            WinApp.Modules.Add(new SystemWindowsFormsModule());
-
-            WinApp.Setup();
         }
 
         #region X value test

@@ -20,6 +20,12 @@ namespace Ultra.Email
         SmtpEmailAccount GetEmailAccount();
 
         /// <summary>
+        /// Gets the email address of the sender
+        /// </summary>
+        /// <returns></returns>
+        string GetFrom();
+
+        /// <summary>
         /// This method should return the subject to be used in the email
         /// </summary>
         /// <returns>The subject</returns>

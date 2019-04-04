@@ -185,7 +185,7 @@ public class SmtpEmailAccount : BaseObject
         MailMessage mail = new MailMessage();
         SmtpClient SmtpServer = new SmtpClient(this.SmtpServer);
 
-        mail.From = new MailAddress(this.UserName);
+        mail.From = new MailAddress(Instance.GetFrom());
 
         mail.To.Add(Instance.GetTo());
 
