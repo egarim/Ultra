@@ -1,6 +1,4 @@
-﻿#if DEBUG
-
-using DevExpress.ExpressApp;
+﻿using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Layout;
 using DevExpress.ExpressApp.Security;
 using DevExpress.ExpressApp.Security.ClientServer;
@@ -42,5 +40,3 @@ namespace TestAllModules.Applications
         }
     }
 }
-
-#endif

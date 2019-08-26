@@ -139,8 +139,8 @@ namespace Ultra.UniversalSearch.Controllers
         {
             UniversalSearchResult CurrentSearchResult = (UniversalSearchResult)e.CurrentObject;
             IObjectSpace objectSpace = Application.CreateObjectSpace(CurrentSearchResult.ObjectType);
-
-            e.ShowViewParameters.CreatedView = Application.CreateDetailView(objectSpace, objectSpace.GetObjectByKey(CurrentSearchResult.ObjectType, Guid.Parse(CurrentSearchResult.ObjectKey)), true);
+            //TODO Fix this, it should not only work with guids
+            e.ShowViewParameters.CreatedView = Application.CreateDetailView(objectSpace, objectSpace.GetObjectByKey(CurrentSearchResult.ObjectType, CurrentSearchResult.ObjectKeyAsObject), true);
         }
 
         private List<Type> SearchableTypes = new List<Type>();
@@ -310,6 +310,7 @@ namespace Ultra.UniversalSearch.Controllers
                     XafDataViewRecord xafDataViewRecord = (XafDataViewRecord)Dv[i];
                     SearchResult.ObjectType = type;
                     SearchResult.ObjectKey = xafDataViewRecord[0].ToString();
+                    SearchResult.ObjectKeyAsObject = xafDataViewRecord[0];
                     List<string> Values = new List<string>();
                     foreach (var displayProperty in DisplayProperties)
                     {

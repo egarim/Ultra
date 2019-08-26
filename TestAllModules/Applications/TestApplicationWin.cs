@@ -1,6 +1,4 @@
-﻿#if DEBUG
-
-using DevExpress.ExpressApp;
+﻿using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Layout;
 using DevExpress.ExpressApp.Win;
 using DevExpress.ExpressApp.Xpo;
@@ -39,5 +37,3 @@ namespace TestAllModules.Applications
         }
     }
 }
-
-#endif

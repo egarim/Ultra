@@ -14,6 +14,11 @@ using DevExpress.Persistent.Validation;
 
 namespace Ultra.Scripting.Core.BusinessObjects
 {
+    public enum Context
+    {
+        Win,Asp,
+       
+    }
     //[ImageName("BO_Contact")]
     [DefaultProperty("AssemblyName")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
@@ -31,8 +36,14 @@ namespace Ultra.Scripting.Core.BusinessObjects
             base.AfterConstruction();
             // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
         }
-
+        
+        public Context Context
+        {
+            get => context;
+            set => SetPropertyValue(nameof(Context), ref context, value);
+        }
         // Fields...
+        Context context;
         private string assemblyName;
 
         private string _AssemblyFullName;

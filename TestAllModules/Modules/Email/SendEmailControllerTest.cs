@@ -46,8 +46,25 @@ namespace TestAllModules.Modules.Email
         [Test]
         public void When_SendEmailWithoutSslOrAuth_Expect_EmailSent_Win()
         {
+
             server.ClearReceivedEmail();
             var os = WinApp.CreateObjectSpace();
+            var Parameters = os.CreateObject<TestEmailParameters>();
+            Parameters.To = "TestAddress@Test.com";
+            Parameters.Body = "Hello";
+            Parameters.From = "admin@admin.com";
+            Parameters.SmtpEmailAccount = os.FindObject<SmtpEmailAccount>(new BinaryOperator(nameof(SmtpEmailAccount.Name), AccountNamePort25));
+           
+            SmtpEmailAccountController.SendEmailSilently(Parameters);
+            //System.Threading.Thread.Sleep(3000);
+            //var test=SmtpEmailAccountController.LastException;
+            Assert.AreEqual(server.ReceivedEmailCount, 1);
+        }
+        [Test]
+        public void When_SendEmailWithoutSslOrAuth_Expect_EmailSent_Asp()
+        {
+            server.ClearReceivedEmail();
+            var os = AspApp.CreateObjectSpace();
             var Parameters = os.CreateObject<TestEmailParameters>();
             Parameters.To = "TestAddress@Test.com";
             Parameters.Body = "Hello";
@@ -74,5 +91,23 @@ namespace TestAllModules.Modules.Email
 
             Assert.NotNull(SmtpEmailAccountController.LastException);
         }
+
+        [Test]
+        public void When_SendEmailWithWrongToAddress_Expect_LastExceptionNotNull_Asp()
+        {
+            server.ClearReceivedEmail();
+            var os = AspApp.CreateObjectSpace();
+            var Parameters = os.CreateObject<TestEmailParameters>();
+            Parameters.To = "BadEmailAddress";
+            Parameters.Body = "Hello";
+            Parameters.From = "admin@admin.com";
+            Parameters.SmtpEmailAccount = os.FindObject<SmtpEmailAccount>(new BinaryOperator(nameof(SmtpEmailAccount.Name), AccountNamePort25));
+
+            SmtpEmailAccountController.SendEmailSilently(Parameters);
+
+            Assert.NotNull(SmtpEmailAccountController.LastException);
+        }
+
+
     }
 }

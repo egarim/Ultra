@@ -35,6 +35,7 @@
             this.RequiredModuleTypes.Add(typeof(Ultra.UniversalSearch.UniversalSearchModule));
             this.RequiredModuleTypes.Add(typeof(Ultra.Scripting.Core.ScriptingCoreModule));
             this.RequiredModuleTypes.Add(typeof(Ultra.Email.EmailModule));
+            this.RequiredModuleTypes.Add(typeof(Ultra.Twilio.Sms.UltraTwilioSms));
             this.AdditionalExportedTypes.Add(typeof(Ultra.Scripting.Core.BusinessObjects.Script));
 
         }

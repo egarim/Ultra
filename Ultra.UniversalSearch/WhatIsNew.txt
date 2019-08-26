@@ -1,0 +1,1 @@
+﻿-fixed the error that prevent to display objects that use a key that is not guid type

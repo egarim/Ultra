@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net452</TargetFramework>
-    <Configurations>Debug;Release;18_2_3_1;18_2_4_1;18_2_5_1;18_2_6_1;18_2_7_X</Configurations>
+    <Configurations>Debug;Release;18_2_3_1;18_2_4_1;18_2_5_1;18_2_6_1;18_2_7_X;19_1_3_X</Configurations>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <Authors>Jose Manuel Ojeda Melgar</Authors>
     <PackageTags>JocheOjeda XAF ExpressApplicationFramework DevExpress Ultra </PackageTags>
@@ -18,6 +18,10 @@
   </ItemGroup>
   <!--Nuget Generation Section-->
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_3_1|AnyCPU'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>18.2.3.1</Version>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='19_1_3_X|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>18.2.3.1</Version>
   </PropertyGroup>
@@ -42,6 +46,11 @@
   <!--Debug Build Reference-->
   <ItemGroup Condition=" '$(Configuration)' == '18_2_3_1' ">
     <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.3" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)'=='19_1_3_X'">
+    <PackageReference Include="DevExpress.ExpressApp.Core.All">
+      <Version>18.2.3</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup Condition=" '$(Configuration)' == '18_2_4_1' ">
     <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="18.2.4" />

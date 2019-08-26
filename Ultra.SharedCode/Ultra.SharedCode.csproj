@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>net452</TargetFramework>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-    <Configurations>Debug;Release;18_2_3_1;18_2_4_1;18_2_5_1;18_2_6;18_2_6_1</Configurations>
+    <Configurations>Debug;Release;18_2_3_1;18_2_4_1;18_2_5_1;18_2_6;18_2_6_1;19_1_3_X</Configurations>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>

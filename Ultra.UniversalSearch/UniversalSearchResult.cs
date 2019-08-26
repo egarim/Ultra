@@ -20,5 +20,8 @@ namespace Ultra.UniversalSearch
 
         [Browsable(false)]
         public string ObjectKey { get; set; }
+
+        [Browsable(false)]
+        public object ObjectKeyAsObject { get; set; }
     }
 }

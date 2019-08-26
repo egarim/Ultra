@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net452</TargetFramework>
-    <Configurations>Debug;Release;18_2_3_1;18_2_4_1;18_2_5_1;18_2_6_1</Configurations>
+    <Configurations>Debug;Release;18_2_3_1;18_2_4_1;18_2_5_1;18_2_6_1;19_1_3_X</Configurations>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <Authors>Jose Manuel Ojeda Melgar</Authors>
     <PackageTags>JocheOjeda XAF ExpressApplicationFramework DevExpress Ultra </PackageTags>
@@ -14,7 +14,7 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
+    <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)" />
   </ItemGroup>
   <!--Nuget Generation Section-->
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_3_1|AnyCPU'">

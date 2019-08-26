@@ -13,6 +13,7 @@ using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Validation;
 using System.Reflection;
 using System.IO;
+using DevExpress.Xpo.Metadata;
 
 namespace Ultra.Scripting.Core.BusinessObjects
 {
@@ -59,6 +60,7 @@ namespace Ultra.Scripting.Core.BusinessObjects
 
         // Fields...
 
+        DateTime lastCompiled;
         private ScriptLanguage _Language;
         private string _CompilationResult;
         private string _Description;
@@ -124,9 +126,16 @@ namespace Ultra.Scripting.Core.BusinessObjects
             set
             {
                 SetPropertyValue("Assembly", ref _Assembly, value);
+                LastCompiled = DateTime.Now;
             }
         }
-
+        [ModelDefault("AllowEdit","false")]
+        [ValueConverter(typeof(UtcDateTimeConverter))]
+        public DateTime LastCompiled
+        {
+            get => lastCompiled;
+            set => SetPropertyValue(nameof(LastCompiled), ref lastCompiled, value);
+        }
         [Association("Script-ScriptAssemblyReferences")]
         public XPCollection<ScriptAssemblyReference> ScriptAssemblyReferences
         {

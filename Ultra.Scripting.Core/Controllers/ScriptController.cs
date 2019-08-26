@@ -28,7 +28,7 @@ namespace Ultra.Scripting.Core.Controllers
     public class ScriptController : ViewController
     {
         private DevExpress.ExpressApp.Actions.SimpleAction saCompile;
-        private DevExpress.ExpressApp.Actions.SimpleAction scDetectLocalAssemblyReferences;
+        private DevExpress.ExpressApp.Actions.SimpleAction saDetectLocalReferences;
         private DevExpress.ExpressApp.Actions.SimpleAction saRunScript;
         private System.ComponentModel.IContainer components = null;
 
@@ -39,7 +39,7 @@ namespace Ultra.Scripting.Core.Controllers
 
             this.components = new System.ComponentModel.Container();
             this.saCompile = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
-            this.scDetectLocalAssemblyReferences = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
+            this.saDetectLocalReferences = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
             this.saRunScript = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
             //
             // saCompile
@@ -51,14 +51,14 @@ namespace Ultra.Scripting.Core.Controllers
             this.saCompile.Execute += new DevExpress.ExpressApp.Actions.SimpleActionExecuteEventHandler(this.saCompile_Execute);
             this.saCompile.ImageName = "Properties";
             //
-            // scDetectLocalAssemblyReferences
+            // saDetectLocalReferences
             //
-            this.scDetectLocalAssemblyReferences.Caption = "Detect Local Assembly References";
-            this.scDetectLocalAssemblyReferences.ConfirmationMessage = null;
-            this.scDetectLocalAssemblyReferences.Id = "3f2bdf2c-a7c3-448c-b1aa-c44fc7041558";
-            this.scDetectLocalAssemblyReferences.ToolTip = null;
-            this.scDetectLocalAssemblyReferences.Execute += new DevExpress.ExpressApp.Actions.SimpleActionExecuteEventHandler(this.scDetectLocalAssemblyReferences_Execute);
-            this.scDetectLocalAssemblyReferences.ImageName = "ArrangeGroups";
+            this.saDetectLocalReferences.Caption = "Detect Local Assembly References";
+            this.saDetectLocalReferences.ConfirmationMessage = null;
+            this.saDetectLocalReferences.Id = "3f2bdf2c-a7c3-448c-b1aa-c44fc7041558";
+            this.saDetectLocalReferences.ToolTip = null;
+            this.saDetectLocalReferences.Execute += new DevExpress.ExpressApp.Actions.SimpleActionExecuteEventHandler(this.scDetectLocalAssemblyReferences_Execute);
+            this.saDetectLocalReferences.ImageName = "ArrangeGroups";
             //
             // saRunScript
             //
@@ -72,7 +72,7 @@ namespace Ultra.Scripting.Core.Controllers
             // ScriptViewController
             //
             this.Actions.Add(this.saCompile);
-            this.Actions.Add(this.scDetectLocalAssemblyReferences);
+            this.Actions.Add(this.saDetectLocalReferences);
             this.Actions.Add(this.saRunScript);
 
             SimpleAction TestAction = new SimpleAction(this, "TestAction", PredefinedCategory.View);
@@ -152,26 +152,6 @@ namespace Ultra.Scripting.Core.Controllers
         private void saCompile_Execute(object sender, SimpleActionExecuteEventArgs e)
         {
             var CurrentCode = (Script)e.CurrentObject;
-
-            #region SampleCode
-
-            string SampleText = @"
-                using System;
-
-                namespace RoslynCompileSample
-                {
-                    public class Writer
-                    {
-                        public void Write(string message)
-                        {
-                            Console.WriteLine(message);
-                        }
-                    }
-                }";
-
-            #endregion SampleCode
-
-            //SyntaxTree syntaxTree = CSharpSyntaxTree.ParseText(SampleText);
 
             SyntaxTree syntaxTree;
             if (CurrentCode.Language == ScriptLanguage.CSharp)
