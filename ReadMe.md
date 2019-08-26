@@ -11,7 +11,7 @@ from endless conversations with technical peers, not all of them are mentioned h
 - José Javier Columbie (Cuba/U.S.A) [Xafmarin](https://xafmarin.com/)
 - Douglas Coto Lara (El Salvador)    Source Code
 - Walter Omar Gavarrete (El Salvador)  [itwgsv](http://www.itwgsv.com)
-- Pedro Hernández (Republica Dominicana) [People Works Services](http://www.peopleworksservices)
+- Pedro Hernández (Republica Dominicana) [PeopleWorks Services](http://www.peopleworksservices.com)
 - Claudio Menetti (Italy) [informind.it](http://www.informind)
 
 All Ultra modules are released under [Microsoft Public License (Ms-PL)](https://opensource.org/licenses/MS-PL)
