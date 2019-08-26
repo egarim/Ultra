@@ -1,0 +1,206 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ProjectGuid>8078deba-9588-4d06-82a0-f1c77e838981</ProjectGuid>
+    <TargetFramework>net462</TargetFramework>
+    <Configurations>18_2_5;18_2_6;18_2_7;19_1_2;18_2_8;19_1_3;18_2_9;19_1_4;18_2_10;19_1_5;Debug;Release</Configurations>
+    <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+    <Authors>José Manuel Ojeda Melgar</Authors>
+    <PackageTags>XAF XPO JocheOjeda Scripting CSharp Vbnet Roslyn</PackageTags>
+    <Company>BIT Frameworks</Company>
+    <Description>XAF scripting module for windows forms</Description>
+    <DebugType>Full</DebugType>
+    <PackageProjectUrl>https://github.com/egarim/Ultra</PackageProjectUrl>
+    <DebugSymbols>True</DebugSymbols>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <AssemblyName>Ultra.Scripting.Win.vDebug</AssemblyName>
+    <Version>1</Version>
+  </PropertyGroup>
+  <!--Nuget Generation Section Start-->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_5|AnyCPU'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyName>Ultra.Scripting.Win.v18.2.5.1</AssemblyName>
+    <Version>18.2.5.1</Version>
+    <PackageId>Ultra.Scripting.Win</PackageId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_6|AnyCPU'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyName>Ultra.Scripting.Win.v18.2.6.1</AssemblyName>
+    <Version>18.2.6.1</Version>
+    <PackageId>Ultra.Scripting.Win</PackageId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_7|AnyCPU'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyName>Ultra.Scripting.Win.v18.2.7.1</AssemblyName>
+    <Version>18.2.7.1</Version>
+    <PackageId>Ultra.Scripting.Win</PackageId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '19_1_2|AnyCPU'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyName>Ultra.Scripting.Win.v19.1.2.1</AssemblyName>
+    <Version>19.1.2.1</Version>
+    <PackageId>Ultra.Scripting.Win</PackageId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_8|AnyCPU'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyName>Ultra.Scripting.Win.v18.2.8.1</AssemblyName>
+    <Version>18.2.8.1</Version>
+    <PackageId>Ultra.Scripting.Win</PackageId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '19_1_3|AnyCPU'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyName>Ultra.Scripting.Win.v19.1.3.1</AssemblyName>
+    <Version>19.1.3.1</Version>
+    <PackageId>Ultra.Scripting.Win</PackageId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_9|AnyCPU'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyName>Ultra.Scripting.Win.v18.2.9.1</AssemblyName>
+    <Version>18.2.9.1</Version>
+    <PackageId>Ultra.Scripting.Win</PackageId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '19_1_4|AnyCPU'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyName>Ultra.Scripting.Win.v19.1.4.1</AssemblyName>
+    <Version>19.1.4.1</Version>
+    <PackageId>Ultra.Scripting.Win</PackageId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_10|AnyCPU'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyName>Ultra.Scripting.Win.v18.2.10.1</AssemblyName>
+    <Version>18.2.10.1</Version>
+    <PackageId>Ultra.Scripting.Win</PackageId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '19_1_5|AnyCPU'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyName>Ultra.Scripting.Win.v19.1.5.1</AssemblyName>
+    <Version>19.1.5.1</Version>
+    <PackageId>Ultra.Scripting.Win</PackageId>
+  </PropertyGroup>
+  <!--Nuget Generation Section End-->
+  <!--Nuget Reference Section Start-->
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == '18_2_5|AnyCPU'">
+    <PackageReference Include="DevExpress.ExpressApp.Validation.Win" Version="18.2.5" />
+    <ProjectReference Include="..\Ultra.Scripting.Core\Ultra.Scripting.Core.csproj" />
+    <PackageReference Include="DevExpress.ExpressApp.FileAttachment.Win" Version="18.2.5" />
+    <PackageReference Include="DevExpress.ExpressApp.Win" Version="18.2.5" />
+    <Reference Include="System.Windows.Forms">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Windows.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == '18_2_6|AnyCPU'">
+    <PackageReference Include="DevExpress.ExpressApp.Validation.Win" Version="18.2.6" />
+    <ProjectReference Include="..\Ultra.Scripting.Core\Ultra.Scripting.Core.csproj" />
+    <PackageReference Include="DevExpress.ExpressApp.FileAttachment.Win" Version="18.2.6" />
+    <PackageReference Include="DevExpress.ExpressApp.Win" Version="18.2.6" />
+    <Reference Include="System.Windows.Forms">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Windows.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == '18_2_7|AnyCPU'">
+    <PackageReference Include="DevExpress.ExpressApp.Validation.Win" Version="18.2.7" />
+    <ProjectReference Include="..\Ultra.Scripting.Core\Ultra.Scripting.Core.csproj" />
+    <PackageReference Include="DevExpress.ExpressApp.FileAttachment.Win" Version="18.2.7" />
+    <PackageReference Include="DevExpress.ExpressApp.Win" Version="18.2.7" />
+    <Reference Include="System.Windows.Forms">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Windows.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == '19_1_2|AnyCPU'">
+    <PackageReference Include="DevExpress.ExpressApp.Validation.Win" Version="19.1.2" />
+    <ProjectReference Include="..\Ultra.Scripting.Core\Ultra.Scripting.Core.csproj" />
+    <PackageReference Include="DevExpress.ExpressApp.FileAttachment.Win" Version="19.1.2" />
+    <PackageReference Include="DevExpress.ExpressApp.Win" Version="19.1.2" />
+    <Reference Include="System.Windows.Forms">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Windows.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == '18_2_8|AnyCPU'">
+    <PackageReference Include="DevExpress.ExpressApp.Validation.Win" Version="18.2.8" />
+    <ProjectReference Include="..\Ultra.Scripting.Core\Ultra.Scripting.Core.csproj" />
+    <PackageReference Include="DevExpress.ExpressApp.FileAttachment.Win" Version="18.2.8" />
+    <PackageReference Include="DevExpress.ExpressApp.Win" Version="18.2.8" />
+    <Reference Include="System.Windows.Forms">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Windows.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == '19_1_3|AnyCPU'">
+    <PackageReference Include="DevExpress.ExpressApp.Validation.Win" Version="19.1.3" />
+    <ProjectReference Include="..\Ultra.Scripting.Core\Ultra.Scripting.Core.csproj" />
+    <PackageReference Include="DevExpress.ExpressApp.FileAttachment.Win" Version="19.1.3" />
+    <PackageReference Include="DevExpress.ExpressApp.Win" Version="19.1.3" />
+    <Reference Include="System.Windows.Forms">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Windows.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == '18_2_9|AnyCPU'">
+    <PackageReference Include="DevExpress.ExpressApp.Validation.Win" Version="18.2.9" />
+    <ProjectReference Include="..\Ultra.Scripting.Core\Ultra.Scripting.Core.csproj" />
+    <PackageReference Include="DevExpress.ExpressApp.FileAttachment.Win" Version="18.2.9" />
+    <PackageReference Include="DevExpress.ExpressApp.Win" Version="18.2.9" />
+    <Reference Include="System.Windows.Forms">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Windows.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == '19_1_4|AnyCPU'">
+    <PackageReference Include="DevExpress.ExpressApp.Validation.Win" Version="19.1.4" />
+    <ProjectReference Include="..\Ultra.Scripting.Core\Ultra.Scripting.Core.csproj" />
+    <PackageReference Include="DevExpress.ExpressApp.FileAttachment.Win" Version="19.1.4" />
+    <PackageReference Include="DevExpress.ExpressApp.Win" Version="19.1.4" />
+    <Reference Include="System.Windows.Forms">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Windows.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == '18_2_10|AnyCPU'">
+    <PackageReference Include="DevExpress.ExpressApp.Validation.Win" Version="18.2.10" />
+    <ProjectReference Include="..\Ultra.Scripting.Core\Ultra.Scripting.Core.csproj" />
+    <PackageReference Include="DevExpress.ExpressApp.FileAttachment.Win" Version="18.2.10" />
+    <PackageReference Include="DevExpress.ExpressApp.Win" Version="18.2.10" />
+    <Reference Include="System.Windows.Forms">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Windows.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == '19_1_5|AnyCPU'">
+    <PackageReference Include="DevExpress.ExpressApp.Validation.Win" Version="19.1.5" />
+    <ProjectReference Include="..\Ultra.Scripting.Core\Ultra.Scripting.Core.csproj" />
+    <PackageReference Include="DevExpress.ExpressApp.FileAttachment.Win" Version="19.1.5" />
+    <PackageReference Include="DevExpress.ExpressApp.Win" Version="19.1.5" />
+    <Reference Include="System.Windows.Forms">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Windows.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PackageReference Include="DevExpress.ExpressApp.Validation.Win" Version="18.2.5" />
+    <ProjectReference Include="..\Ultra.Scripting.Core\Ultra.Scripting.Core.csproj" />
+    <PackageReference Include="DevExpress.ExpressApp.FileAttachment.Win" Version="18.2.5" />
+    <PackageReference Include="DevExpress.ExpressApp.Win" Version="18.2.5" />
+    <Reference Include="System.Windows.Forms">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Windows.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <!--NugetProject ReferencesSection End-->
+  <!--Extra Start-->
+  <!--XAF_Resources-->
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <!--Extra End-->
+  <Target Name="CopyPackage" AfterTargets="Pack">
+    <Copy SourceFiles="bin\$(ConfigurationName)\$(PackageId).$(PackageVersion).nupkg" DestinationFolder="$(USERPROFILE)\Documents\MyNugets\" />
+  </Target>
+</Project>
