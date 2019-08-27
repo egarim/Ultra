@@ -2,9 +2,19 @@
 This module helps you search across all your persistent classes and present a unified search result
 
 
-##w Setup
+### Setup
 
-- Add to your agnostic module project the [nuget package](https://www.nuget.org/packages/Ultra.UniversalSearch/) that matches your current version of XAF
+- Add to your agnostic module project the [nuget package](https://nuget.bitframeworks.com/feeds/main/Ultra.UniversalSearch/19.1.5.1) from https://nuget.bitframeworks.com/nuget/main/ that matches your current version of XAF
+
+	With the Nuget.exe Client: From the command line, run the following command:
+	```
+	nuget install Ultra.UniversalSearch -Version 19.1.5.1 -Source https://nuget.bitframeworks.com/nuget/main/
+	```
+
+	To install Ultra.UniversalSearch from the Package Manager Console within Visual Studio, run the following command:
+	```
+	Install-Package Ultra.UniversalSearch -Version 19.1.5.1 -Source https://nuget.bitframeworks.com/nuget/main/
+	```
 - Add the module to the require modules (in Module.Designer.cs or Module.Designer.vb) as shown below
 
 ### C#
