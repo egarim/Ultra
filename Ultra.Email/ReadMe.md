@@ -14,7 +14,7 @@ This module allows you to create and use smtp email accounts inside of your XAF 
 
 	To install Ultra.UniversalSearch from the Package Manager Console within Visual Studio, run the following command:
 	```
-	Install-Package Ultra.UniversalSearch -Version 19.1.5.1 -Source https://nuget.bitframeworks.com/nuget/main/
+	Install-Package Ultra.Email -Version 19.1.5.1 -Source https://nuget.bitframeworks.com/nuget/main/
 	```
 
 - Add the module to the require modules (in Module.Designer.cs or Module.Designer.vb) as shown below
