@@ -5,7 +5,7 @@ This module allows you to create and use smtp email accounts inside of your XAF 
 
 ### Setup
 
-- Add to your agnostic module project the [nuget package](https://www.nuget.org/packages/Ultra.Email/) that matches your current version of XAF
+- Add to your agnostic module project the [nuget package](https://nuget.bitframeworks.com/feeds/main/Ultra.UniversalSearch/19.1.5.1) from https://nuget.bitframeworks.com/nuget/main/ that matches your current version of XAF
 - Add the module to the require modules (in Module.Designer.cs or Module.Designer.vb) as shown below
 
 ### C#
