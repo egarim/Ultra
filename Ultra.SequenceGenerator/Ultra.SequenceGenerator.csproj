@@ -1,15 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <ProjectGuid>a849a0f3-2621-4e8a-b21b-2761917fcb5e</ProjectGuid>
+    <ProjectGuid>c695d11c-b73b-4365-8a27-39eb1d6c966c</ProjectGuid>
     <TargetFramework>net462</TargetFramework>
     <Configurations>18_2_5;18_2_6;18_2_7;19_1_2;18_2_8;19_1_3;18_2_9;19_1_4;18_2_10;19_1_5;19_1_6;19_2_2_beta;19_1_7;19_2_3;Debug;Release</Configurations>
     <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
     <Authors>José Manuel Ojeda Melgar</Authors>
-    <PackageTags>Joche Ojeda, XAF, Express Application Framework,DevExpress,Ultra,Universal Search, XAF Ultra Modules</PackageTags>
+    <PackageTags>Ultra Document Sequence</PackageTags>
     <Company>BIT Frameworks</Company>
-    <Description>This module helps you search across all your persistent classes and present a unified search result</Description>
+    <Description>This module allows you to setup document sequence</Description>
     <DebugType>Full</DebugType>
-    <PackageProjectUrl>https://github.com/egarim/Ultra/tree/master/Ultra.UniversalSearch</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/egarim/Ultra/tree/master/Ultra.SequenceGenerator</PackageProjectUrl>
     <DebugSymbols>True</DebugSymbols>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
@@ -18,200 +18,200 @@
     <None Include="LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <AssemblyName>Ultra.UniversalSearch.vDebug</AssemblyName>
+    <AssemblyName>Ultra.SequenceGenerator.vDebug</AssemblyName>
     <Version>1</Version>
   </PropertyGroup>
   <!--Nuget Generation Section Start-->
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_5|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyName>Ultra.UniversalSearch.v18.2.5.1</AssemblyName>
+    <AssemblyName>Ultra.SequenceGenerator.v18.2.5.1</AssemblyName>
     <Version>18.2.5.1</Version>
-    <PackageId>Ultra.UniversalSearch</PackageId>
+    <PackageId>Ultra.SequenceGenerator</PackageId>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_6|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyName>Ultra.UniversalSearch.v18.2.6.1</AssemblyName>
+    <AssemblyName>Ultra.SequenceGenerator.v18.2.6.1</AssemblyName>
     <Version>18.2.6.1</Version>
-    <PackageId>Ultra.UniversalSearch</PackageId>
+    <PackageId>Ultra.SequenceGenerator</PackageId>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_7|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyName>Ultra.UniversalSearch.v18.2.7.1</AssemblyName>
+    <AssemblyName>Ultra.SequenceGenerator.v18.2.7.1</AssemblyName>
     <Version>18.2.7.1</Version>
-    <PackageId>Ultra.UniversalSearch</PackageId>
+    <PackageId>Ultra.SequenceGenerator</PackageId>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '19_1_2|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyName>Ultra.UniversalSearch.v19.1.2.1</AssemblyName>
+    <AssemblyName>Ultra.SequenceGenerator.v19.1.2.1</AssemblyName>
     <Version>19.1.2.1</Version>
-    <PackageId>Ultra.UniversalSearch</PackageId>
+    <PackageId>Ultra.SequenceGenerator</PackageId>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_8|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyName>Ultra.UniversalSearch.v18.2.8.1</AssemblyName>
+    <AssemblyName>Ultra.SequenceGenerator.v18.2.8.1</AssemblyName>
     <Version>18.2.8.1</Version>
-    <PackageId>Ultra.UniversalSearch</PackageId>
+    <PackageId>Ultra.SequenceGenerator</PackageId>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '19_1_3|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyName>Ultra.UniversalSearch.v19.1.3.1</AssemblyName>
+    <AssemblyName>Ultra.SequenceGenerator.v19.1.3.1</AssemblyName>
     <Version>19.1.3.1</Version>
-    <PackageId>Ultra.UniversalSearch</PackageId>
+    <PackageId>Ultra.SequenceGenerator</PackageId>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_9|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyName>Ultra.UniversalSearch.v18.2.9.1</AssemblyName>
+    <AssemblyName>Ultra.SequenceGenerator.v18.2.9.1</AssemblyName>
     <Version>18.2.9.1</Version>
-    <PackageId>Ultra.UniversalSearch</PackageId>
+    <PackageId>Ultra.SequenceGenerator</PackageId>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '19_1_4|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyName>Ultra.UniversalSearch.v19.1.4.1</AssemblyName>
+    <AssemblyName>Ultra.SequenceGenerator.v19.1.4.1</AssemblyName>
     <Version>19.1.4.1</Version>
-    <PackageId>Ultra.UniversalSearch</PackageId>
+    <PackageId>Ultra.SequenceGenerator</PackageId>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '18_2_10|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyName>Ultra.UniversalSearch.v18.2.10.1</AssemblyName>
+    <AssemblyName>Ultra.SequenceGenerator.v18.2.10.1</AssemblyName>
     <Version>18.2.10.1</Version>
-    <PackageId>Ultra.UniversalSearch</PackageId>
+    <PackageId>Ultra.SequenceGenerator</PackageId>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '19_1_5|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyName>Ultra.UniversalSearch.v19.1.5.1</AssemblyName>
+    <AssemblyName>Ultra.SequenceGenerator.v19.1.5.1</AssemblyName>
     <Version>19.1.5.1</Version>
-    <PackageId>Ultra.UniversalSearch</PackageId>
+    <PackageId>Ultra.SequenceGenerator</PackageId>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '19_1_6|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyName>Ultra.UniversalSearch.v19.1.6.1</AssemblyName>
+    <AssemblyName>Ultra.SequenceGenerator.v19.1.6.1</AssemblyName>
     <Version>19.1.6.1</Version>
-    <PackageId>Ultra.UniversalSearch</PackageId>
+    <PackageId>Ultra.SequenceGenerator</PackageId>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '19_2_2-beta|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyName>Ultra.UniversalSearch.v19.2.2-beta.1</AssemblyName>
+    <AssemblyName>Ultra.SequenceGenerator.v19.2.2-beta.1</AssemblyName>
     <Version>19.2.2-beta.1</Version>
-    <PackageId>Ultra.UniversalSearch</PackageId>
+    <PackageId>Ultra.SequenceGenerator</PackageId>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '19_1_7|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyName>Ultra.UniversalSearch.v19.1.7.1</AssemblyName>
+    <AssemblyName>Ultra.SequenceGenerator.v19.1.7.1</AssemblyName>
     <Version>19.1.7.1</Version>
-    <PackageId>Ultra.UniversalSearch</PackageId>
+    <PackageId>Ultra.SequenceGenerator</PackageId>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '19_2_3|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyName>Ultra.UniversalSearch.v19.2.3.1</AssemblyName>
+    <AssemblyName>Ultra.SequenceGenerator.v19.2.3.1</AssemblyName>
     <Version>19.2.3.1</Version>
-    <PackageId>Ultra.UniversalSearch</PackageId>
+    <PackageId>Ultra.SequenceGenerator</PackageId>
   </PropertyGroup>
   <!--Nuget Generation Section End-->
   <!--Nuget Reference Section Start-->
   <ItemGroup Condition="'$(Configuration)|$(Platform)' == '18_2_5|AnyCPU'">
-    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="18.2.5" />
     <PackageReference Include="DevExpress.ExpressApp" Version="18.2.5" />
-    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="18.2.5" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="18.2.5" />
     <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="18.2.5" />
     <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="18.2.5" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="18.2.5" />
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)|$(Platform)' == '18_2_6|AnyCPU'">
-    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="18.2.6" />
     <PackageReference Include="DevExpress.ExpressApp" Version="18.2.6" />
-    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="18.2.6" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="18.2.6" />
     <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="18.2.6" />
     <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="18.2.6" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="18.2.6" />
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)|$(Platform)' == '18_2_7|AnyCPU'">
-    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="18.2.7" />
     <PackageReference Include="DevExpress.ExpressApp" Version="18.2.7" />
-    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="18.2.7" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="18.2.7" />
     <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="18.2.7" />
     <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="18.2.7" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="18.2.7" />
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)|$(Platform)' == '19_1_2|AnyCPU'">
-    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="19.1.2" />
     <PackageReference Include="DevExpress.ExpressApp" Version="19.1.2" />
-    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="19.1.2" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="19.1.2" />
     <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="19.1.2" />
     <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="19.1.2" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="19.1.2" />
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)|$(Platform)' == '18_2_8|AnyCPU'">
-    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="18.2.8" />
     <PackageReference Include="DevExpress.ExpressApp" Version="18.2.8" />
-    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="18.2.8" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="18.2.8" />
     <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="18.2.8" />
     <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="18.2.8" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="18.2.8" />
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)|$(Platform)' == '19_1_3|AnyCPU'">
-    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="19.1.3" />
     <PackageReference Include="DevExpress.ExpressApp" Version="19.1.3" />
-    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="19.1.3" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="19.1.3" />
     <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="19.1.3" />
     <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="19.1.3" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="19.1.3" />
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)|$(Platform)' == '18_2_9|AnyCPU'">
-    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="18.2.9" />
     <PackageReference Include="DevExpress.ExpressApp" Version="18.2.9" />
-    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="18.2.9" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="18.2.9" />
     <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="18.2.9" />
     <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="18.2.9" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="18.2.9" />
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)|$(Platform)' == '19_1_4|AnyCPU'">
-    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="19.1.4" />
     <PackageReference Include="DevExpress.ExpressApp" Version="19.1.4" />
-    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="19.1.4" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="19.1.4" />
     <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="19.1.4" />
     <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="19.1.4" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="19.1.4" />
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)|$(Platform)' == '18_2_10|AnyCPU'">
-    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="18.2.10" />
     <PackageReference Include="DevExpress.ExpressApp" Version="18.2.10" />
-    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="18.2.10" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="18.2.10" />
     <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="18.2.10" />
     <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="18.2.10" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="18.2.10" />
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)|$(Platform)' == '19_1_5|AnyCPU'">
-    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="19.1.5" />
     <PackageReference Include="DevExpress.ExpressApp" Version="19.1.5" />
-    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="19.1.5" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="19.1.5" />
     <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="19.1.5" />
     <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="19.1.5" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="19.1.5" />
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)|$(Platform)' == '19_1_6|AnyCPU'">
-    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="19.1.6" />
     <PackageReference Include="DevExpress.ExpressApp" Version="19.1.6" />
-    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="19.1.6" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="19.1.6" />
     <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="19.1.6" />
     <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="19.1.6" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="19.1.6" />
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)|$(Platform)' == '19_2_2-beta|AnyCPU'">
-    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="19.2.2-beta" />
     <PackageReference Include="DevExpress.ExpressApp" Version="19.2.2-beta" />
-    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="19.2.2-beta" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="19.2.2-beta" />
     <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="19.2.2-beta" />
     <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="19.2.2-beta" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="19.2.2-beta" />
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)|$(Platform)' == '19_1_7|AnyCPU'">
-    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="19.1.7" />
     <PackageReference Include="DevExpress.ExpressApp" Version="19.1.7" />
-    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="19.1.7" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="19.1.7" />
     <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="19.1.7" />
     <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="19.1.7" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="19.1.7" />
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)|$(Platform)' == '19_2_3|AnyCPU'">
-    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="19.2.3" />
     <PackageReference Include="DevExpress.ExpressApp" Version="19.2.3" />
-    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="19.2.3" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="19.2.3" />
     <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="19.2.3" />
     <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="19.2.3" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="19.2.3" />
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="18.2.5" />
     <PackageReference Include="DevExpress.ExpressApp" Version="18.2.5" />
-    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="18.2.5" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="18.2.5" />
     <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="18.2.5" />
     <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="18.2.5" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="18.2.5" />
   </ItemGroup>
   <!--NugetProject ReferencesSection End-->
   <!--Extra Start-->

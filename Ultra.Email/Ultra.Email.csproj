@@ -1,8 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <ProjectGuid>861425e0-15d7-4e2f-9c93-6a35aaa92883</ProjectGuid>
     <TargetFramework>net462</TargetFramework>
-    <Configurations>18_2_5;18_2_6;18_2_7;19_1_2;18_2_8;19_1_3;18_2_9;19_1_4;18_2_10;19_1_5;Debug;Release</Configurations>
+    <Configurations>18_2_5;18_2_6;18_2_7;19_1_2;18_2_8;19_1_3;18_2_9;19_1_4;18_2_10;19_1_5;19_1_6;19_2_2_beta;19_1_7;19_2_3;Debug;Release</Configurations>
     <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
     <Authors>José Manuel Ojeda Melgar</Authors>
     <PackageTags>Ultra Email Module</PackageTags>
@@ -82,6 +82,30 @@
     <Version>19.1.5.1</Version>
     <PackageId>Ultra.Email</PackageId>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '19_1_6|AnyCPU'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyName>Ultra.Email.v19.1.6.1</AssemblyName>
+    <Version>19.1.6.1</Version>
+    <PackageId>Ultra.Email</PackageId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '19_2_2-beta|AnyCPU'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyName>Ultra.Email.v19.2.2-beta.1</AssemblyName>
+    <Version>19.2.2-beta.1</Version>
+    <PackageId>Ultra.Email</PackageId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '19_1_7|AnyCPU'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyName>Ultra.Email.v19.1.7.1</AssemblyName>
+    <Version>19.1.7.1</Version>
+    <PackageId>Ultra.Email</PackageId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '19_2_3|AnyCPU'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyName>Ultra.Email.v19.2.3.1</AssemblyName>
+    <Version>19.2.3.1</Version>
+    <PackageId>Ultra.Email</PackageId>
+  </PropertyGroup>
   <!--Nuget Generation Section End-->
   <!--Nuget Reference Section Start-->
   <ItemGroup Condition="'$(Configuration)|$(Platform)' == '18_2_5|AnyCPU'">
@@ -153,6 +177,34 @@
     <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="19.1.5" />
     <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="19.1.5" />
     <PackageReference Include="DevExpress.ExpressApp.Validation" Version="19.1.5" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == '19_1_6|AnyCPU'">
+    <PackageReference Include="DevExpress.ExpressApp" Version="19.1.6" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="19.1.6" />
+    <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="19.1.6" />
+    <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="19.1.6" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="19.1.6" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == '19_2_2-beta|AnyCPU'">
+    <PackageReference Include="DevExpress.ExpressApp" Version="19.2.2-beta" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="19.2.2-beta" />
+    <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="19.2.2-beta" />
+    <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="19.2.2-beta" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="19.2.2-beta" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == '19_1_7|AnyCPU'">
+    <PackageReference Include="DevExpress.ExpressApp" Version="19.1.7" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="19.1.7" />
+    <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="19.1.7" />
+    <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="19.1.7" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="19.1.7" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == '19_2_3|AnyCPU'">
+    <PackageReference Include="DevExpress.ExpressApp" Version="19.2.3" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="19.2.3" />
+    <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="19.2.3" />
+    <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="19.2.3" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="19.2.3" />
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <PackageReference Include="DevExpress.ExpressApp" Version="18.2.5" />
